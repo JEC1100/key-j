@@ -1,37 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-class Searchbar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: '' };
+const Searchbar = () => {
+  const [songname, setSongname] = useState({ value: '' });
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  const handleChange = (event) => {
+    setSongname({ value: event.target.value });
+  };
 
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
+  const handleSubmit = (event) => {
+    // event.preventDefault();
+  };
 
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="songname">Song name</label>
-        <input
-          type="text"
-          value={this.state.value}
-          onChange={this.handleChange}
-          id="songname"
-        />
-        <input type="submit" value="Submit" />
-      </form>
-    );
-  }
-}
+  return (
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="songname">Song name</label>
+      <input
+        type="text"
+        value={songname.value}
+        onChange={handleChange}
+        id="songname"
+      />
+      <input type="submit" value="Submit" />
+    </form>
+  );
+};
 
 export default Searchbar;
