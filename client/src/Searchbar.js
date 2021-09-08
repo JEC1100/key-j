@@ -7,7 +7,7 @@ const Searchbar = () => {
     setSongname({ value: event.target.value });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = () => {
     // event.preventDefault();
   };
 
