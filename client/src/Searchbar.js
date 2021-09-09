@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 
-const Searchbar = () => {
+const Searchbar = ({ handleSubmit }) => {
   const [songname, setSongname] = useState({ value: '' });
 
   const handleChange = (event) => {
+    event.preventDefault();
     setSongname({ value: event.target.value });
   };
 
-  const handleSubmit = () => {
-    // event.preventDefault();
-  };
-
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={() => handleSubmit()} data-testid="form">
       <label htmlFor="songname">Song name</label>
       <input
         type="text"
