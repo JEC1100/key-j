@@ -9,7 +9,7 @@ const Searchbar = ({ handleSubmit }) => {
   };
 
   return (
-    <form onSubmit={() => handleSubmit()} data-testid="form">
+    <form onSubmit={handleSubmit} data-testid="form">
       <label htmlFor="songname">Song name</label>
       <input
         type="text"
