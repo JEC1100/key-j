@@ -1,12 +1,16 @@
+import React from 'react';
+import Searchbar from './Searchbar';
 
-
-
-function App() {
+const App = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
   return (
-    <div className="App">
-     Hello Pav
+    <div>
+      <h1>Key-J</h1>
+      <Searchbar handleSubmit={handleSubmit} />
     </div>
   );
-}
+};
 
 export default App;
