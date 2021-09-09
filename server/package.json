@@ -4,15 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pretest": "eslint --ignore-path .gitignore .",
+    "lint": "eslint --ignore-path .gitignore .",
     "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "babel-eslint": "^10.1.0",
+    "dotenv": "^10.0.0",
     "eslint-plugin-jest": "^24.4.0",
-    "jest": "^27.1.1"
+    "jest": "^27.1.1",
+    "spotify-web-api-node": "^5.0.2"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
