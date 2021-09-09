@@ -1,7 +1,30 @@
 # Key-J app
 An app to help DJs, musicians, music enthusiasts, access a song's key information
 
+## Set up
+This project works in two parts; The front end is stored in the client folder, and the back end is stored in server folder. Once the project has been forked/cloned, each will need to be set up individually.
 
+### Server set up
+The back end runs on Node.js and first needs dependencies to be installed. First cd into server folder and then run:
+```
+npm install
+```
+
+### Server tests
+Tests are run with Jest. To run tests, run:
+```
+npm test
+```
+
+If you want to see the test coverage alongside the tests, run:
+```
+npm test -- --coverage
+```
+
+Linting is handled by ESLint and run automatically with the tests. If you want to run linting without the tests run:
+```
+npm run pretest
+```
 
 ## User Stories
 
