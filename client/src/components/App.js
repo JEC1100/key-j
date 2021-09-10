@@ -2,14 +2,14 @@ import React from 'react';
 import Searchbar from './Searchbar';
 
 const App = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const submitSongName = (songname) => {
+   console.log(songname.value)
   };
   return (
     <div className="app">
       <h1>Key-J</h1>
       <div className="searchbar">
-        <Searchbar handleSubmit={handleSubmit} />
+        <Searchbar submit={submitSongName} />
       </div>
       <div className="info-table">
        

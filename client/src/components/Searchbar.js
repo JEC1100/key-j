@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 
-const Searchbar = ({ handleSubmit }) => {
+const Searchbar = (props) => {
   const [songname, setSongname] = useState({ value: '' });
 
   const handleChange = (event) => {
     event.preventDefault();
     setSongname({ value: event.target.value });
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.submit(songname)
+  }
 
   return (
     <form onSubmit={handleSubmit} data-testid="form">
