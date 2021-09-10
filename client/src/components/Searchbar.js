@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types'
 
 const Searchbar = (props) => {
   const [songname, setSongname] = useState({ value: '' });
@@ -27,4 +28,8 @@ const Searchbar = (props) => {
   );
 };
 
+Searchbar.propTypes = {
+  props: PropTypes.func,
+  submit: PropTypes.func
+}
 export default Searchbar;
