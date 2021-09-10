@@ -1,6 +1,6 @@
-const express = require('express'),
-router = express.Router(),
-root = require('../controllers/root_controller');
+const express = require('express');
+const router = express.Router();
+const root = require('../controllers/root_controller');
 
 router.post('/', root.root);
 

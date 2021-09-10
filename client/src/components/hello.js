@@ -12,7 +12,7 @@ export const Hello = () => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        songName: 'found god in a tomato'
+        songName: 'master exploder'
       })
     }).then(res => {
       if(res.ok){

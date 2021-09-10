@@ -9,7 +9,7 @@ let spotifyApi = new SpotifyWebApi({
 });
 
 const getTracks = (songName) => {
-  return new Promise((res, rej) => {
+  const response = new Promise((res, rej) => {
     spotifyApi.clientCredentialsGrant().then(
       function(data) {
         spotifyApi.setAccessToken(data.body['access_token']);
@@ -22,7 +22,8 @@ const getTracks = (songName) => {
       function(err) {
         rej('Something went wrong!', err);
       });
-  })
+  });
+  return response;
 };
 
 module.exports = getTracks;
