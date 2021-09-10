@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 let SpotifyWebApi = require('spotify-web-api-node');
 let formatSongs = require('./format_songs');
 

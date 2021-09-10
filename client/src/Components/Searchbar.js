@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const Searchbar = ({ handleSubmit }) => {
   const [songname, setSongname] = useState({ value: '' });
@@ -21,5 +22,8 @@ const Searchbar = ({ handleSubmit }) => {
     </form>
   );
 };
-
+// need to check this validation is correct!
+Searchbar.propTypes = {
+  handleSubmit: PropTypes.func
+}
 export default Searchbar;

@@ -1,5 +1,6 @@
 import React from 'react';
-import Searchbar from './Searchbar';
+import { Hello } from './components/hello';
+import Searchbar from './components/Searchbar';
 
 const App = () => {
   const handleSubmit = (event) => {
@@ -9,6 +10,7 @@ const App = () => {
     <div>
       <h1>Key-J</h1>
       <Searchbar handleSubmit={handleSubmit} />
+      <Hello />
     </div>
   );
 };

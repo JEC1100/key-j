@@ -1,6 +1,17 @@
 # Key-J app
 An app to help DJs, musicians, music enthusiasts, access a song's key information
 
+## run servers
+
+Have two tabs open in command line. For one cd into server and the other cd into client. In the tabe with server open, run:
+```
+npm run dev
+```
+Then in the tabe with client open run:
+```
+npm start
+```
+
 ## Set up
 This project works in two parts; The front end is stored in the client folder, and the back end is stored in server folder. Once the project has been forked/cloned, each will need to be set up individually.
 
@@ -28,23 +39,23 @@ npm run pretest
 
 ## User Stories
 
-````
+```
 As a user,
 So that I can find a song,
 I can search by name.
-````
+```
 
-````
+```
 As a user,
 So I can refine my search,
 I can click on the specific song I want.
-````
+```
 
-````
+```
 As a user,
 So I can check a songs fits my purpose,
 I can see the genre of a song.
-````
+```
 
 ```
 As a user,
