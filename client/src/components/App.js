@@ -1,4 +1,5 @@
 import React from 'react';
+import { Hello } from './hello';
 import Searchbar from './Searchbar';
 
 const App = () => {
@@ -12,8 +13,7 @@ const App = () => {
         <Searchbar submit={submitSongName} />
       </div>
       <div className="info-table">
-       
-
+        <Hello />
       </div>
     </div>
   );
