@@ -1,13 +1,9 @@
+const getTracks = require('../src/get_tracks')
+
 exports.root = (req, res) => {
-  res.json({
-    "songs": [{
-      name: 'Killing in the name of', 
-      artist: 'Rage against the machine',
-      id: 1
-    }, {
-      name: 'Yesterday', 
-      artist: 'Beatles',
-      id: 2
-    }]
+  getTracks(req.body.songName).then(data => {
+    res.json({
+      "songs": data
+    });
   });
 };

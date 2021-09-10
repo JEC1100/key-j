@@ -5,9 +5,20 @@ export const Hello = () => {
   const [initialState, setInitialState] = useState([])
 
   useEffect(() => {
-    fetch('/api/').then(res => {
+    fetch('/api/', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        songName: 'found god in a tomato'
+      })
+    }).then(res => {
       if(res.ok){
         return res.json()
+      } else {
+        console.log(res)
       }
     }).then(jsonResponse => setInitialState(jsonResponse.songs))
   },[])
