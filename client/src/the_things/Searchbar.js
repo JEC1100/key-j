@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Searchbar = ({ handleSubmit }) => {
+const Searchbar = (props) => {
   const [songname, setSongname] = useState({ value: '' });
 
   const handleChange = (event) => {
     event.preventDefault();
     setSongname({ value: event.target.value });
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.submit(songname)
+  }
 
   return (
     <form onSubmit={handleSubmit} data-testid="form">
@@ -22,8 +27,9 @@ const Searchbar = ({ handleSubmit }) => {
     </form>
   );
 };
-// need to check this validation is correct!
+
 Searchbar.propTypes = {
-  handleSubmit: PropTypes.func
+  props: PropTypes.func,
+  submit: PropTypes.func
 }
 export default Searchbar;

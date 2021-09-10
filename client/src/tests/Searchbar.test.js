@@ -12,10 +12,10 @@ test('a user can input a song title and the value is received', () => {
 });
 
 test('a user can click submit and a request is fired off', () => {
-  const handleSubmit = jest.fn();
-  const { getByTestId } = render(<Searchbar handleSubmit={handleSubmit} />);
+  const submitSongName = jest.fn();
+  const { getByTestId } = render(<Searchbar submit={submitSongName} />);
   const input = screen.getByLabelText(/Song name/i);
   userEvent.type(input, 'Yellow submarine');
   fireEvent.submit(getByTestId('form'));
-  expect(handleSubmit).toHaveBeenCalled();
+  expect(submitSongName).toHaveBeenCalled();
 });

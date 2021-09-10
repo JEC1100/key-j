@@ -20,6 +20,10 @@ The back end runs on Node.js and first needs dependencies to be installed. First
 ```
 npm install
 ```
+Then cd into client folder and repeat this step, by again running:
+```
+npm install
+```
 
 ### Server tests
 Tests are run with Jest. To run tests, run:
