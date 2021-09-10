@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Searchbar from './Searchbar';
+import Searchbar from '../components/Searchbar';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom/extend-expect';
 

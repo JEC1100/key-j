@@ -6,9 +6,15 @@ const App = () => {
     event.preventDefault();
   };
   return (
-    <div>
+    <div className="app">
       <h1>Key-J</h1>
-      <Searchbar handleSubmit={handleSubmit} />
+      <div className="searchbar">
+        <Searchbar handleSubmit={handleSubmit} />
+      </div>
+      <div className="info-table">
+       
+
+      </div>
     </div>
   );
 };
