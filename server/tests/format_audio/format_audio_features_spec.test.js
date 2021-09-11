@@ -17,7 +17,7 @@ describe('formatting audio features', () => {
     expect(result.energy).toEqual('Medium');
     expect(result.tempo).toEqual(160);
     expect(result.mood).toEqual(':D');
-    expect(result.key).toEqual(5);
-    expect(result.mode).toEqual(0);
+    expect(result.key).toEqual('F');
+    expect(result.mode).toEqual('Minor');
   });
 });
