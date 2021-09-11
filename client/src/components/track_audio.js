@@ -1,8 +1,10 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
+import { useParams } from "react-router-dom"
 
 export const TrackAudioFeatures = () => {
   const [state, setState] = useState([])
+  const params = useParams()
 
   useEffect(() => {
     fetch('/api/track_audio', {
@@ -12,7 +14,7 @@ export const TrackAudioFeatures = () => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        songId: '4DAaQ5InUO23d8yNRbB0Yj'
+        songId: params.id
       })
     }).then(res => {
       if(res.ok){
