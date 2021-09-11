@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="app">
       <h1>Key-J</h1>
-      <div className="searchbar">
+      <div className="form-container">
         <Searchbar submit={submitSongName} />
       </div>
       <div className="info-table">
