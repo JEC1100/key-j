@@ -22,8 +22,8 @@ export const Hello = () => {
       }
     }).then(jsonResponse => setInitialState(jsonResponse.songs))
   },[])
-  // Should change unique key value to use UUID
+
   return(<div>
-    {initialState.length > 0 && initialState.map((e) => <li key={e.id}>{e.name} by {e.artist}</li>)}
+    {initialState.length > 0 && initialState.map((e, i) => <li key={i}><a href={'/' + e.id} key='audio-features'>{e.name} by {e.artist}</a></li>)}
   </div>)
 }
