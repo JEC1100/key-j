@@ -26,6 +26,12 @@ export const TrackAudioFeatures = () => {
   },[])
 
   return(<div>
-    <p> ENERGY: {state.energy} TEMPO: {state.tempo}</p>
+    <p> ENERGY: {state.energy} <br></br>
+    DANCEABILITY: {state.danceability} <br></br>
+    TEMPO: {state.tempo} BPM <br></br>
+    KEY: {state.key} <br></br>
+    MOOD {state.mood}
+    </p>
   </div>)
 }
+
