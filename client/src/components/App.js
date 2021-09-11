@@ -6,7 +6,6 @@ const App = () => {
   const [songTitle, setSongTitle] = useState('');
 
   const submitSongName = (songname) => {
-    console.log(songname.value);
     setSongTitle(songname.value);
   };
 
