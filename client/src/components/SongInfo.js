@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const SongInfo = (props) => {
   const [initialState, setInitialState] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch('/api/', {
@@ -19,26 +20,20 @@ const SongInfo = (props) => {
       }),
     })
       .then((res) => {
-        if (res.ok) {
-          return res.json();
-        } else {
-          console.log(res);
+        if (!res.ok) {
+          throw Error('Could not fetch data.');
         }
+        return res.json();
       })
-      .then((jsonResponse) => setInitialState(jsonResponse.songs));
+      .then((jsonResponse) => setInitialState(jsonResponse.songs))
+      .catch((err) => {
+        setError(err.message);
+      });
   }, [props.songTitle]);
-  // Should change unique key value to use UUID
-  return (
-    // <div>
-    //   {initialState.length > 0 &&
-    //     initialState.map((e, i) => (
-    //       <li key={i}>
-    //         {e.name} by {e.artist}
-    //       </li>
-    //     ))}
-    // </div>
 
+  return (
     <div>
+      {error && <div>{error}</div>}
       {initialState.length > 0 &&
         initialState.map((e) => (
           <div key={uuidv4()}>
