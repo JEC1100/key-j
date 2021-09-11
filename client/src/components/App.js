@@ -6,7 +6,7 @@ const App = () => {
   const [songTitle, setSongTitle] = useState('');
 
   const submitSongName = (songname) => {
-    setSongTitle(songname.value);
+    setSongTitle(songname);
   };
 
   if (songTitle) {

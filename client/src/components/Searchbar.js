@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const Searchbar = (props) => {
-  const [songname, setSongname] = useState({ value: '' });
+  const [songname, setSongname] = useState('');
 
   const handleChange = (event) => {
     event.preventDefault();
-    setSongname({ value: event.target.value });
+    setSongname(event.target.value);
   };
 
   const handleSubmit = (e) => {
@@ -19,7 +19,7 @@ const Searchbar = (props) => {
       <label htmlFor="songname">Song name</label>
       <input
         type="text"
-        value={songname.value}
+        value={songname}
         onChange={handleChange}
         id="songname"
       />
