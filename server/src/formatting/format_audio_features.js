@@ -1,6 +1,6 @@
-const formatEnergy = require('./format_audio/energy');
-const formatMood = require('./format_audio/mood');
-const formatDanceability = require('./format_audio/danceability');
+const formatEnergy = require('./energy');
+const formatMood = require('./mood');
+const formatDanceability = require('./danceability');
 
 const formatAudioFeatures = (features) => {
   return {

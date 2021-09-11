@@ -1,4 +1,4 @@
-const formatDanceability = require('../../src/format_audio/danceability');
+const formatDanceability = require('../../src/formatting/danceability');
 
 describe('formatting danceability', () => {
   it("returns 'Time for bed' for values below 0.2", () => {
