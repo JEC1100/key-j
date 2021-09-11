@@ -20,4 +20,9 @@ describe('formatting audio features', () => {
     expect(result.key).toEqual('F');
     expect(result.mode).toEqual('Minor');
   });
+  it('returns major given 1', () => {
+    let features = {mode: 1};
+    let format = formatAudioFeatures(features);
+    expect(format.mode).toEqual('Major');
+  });
 });

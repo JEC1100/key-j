@@ -29,8 +29,8 @@ export const TrackAudioFeatures = () => {
     <p> ENERGY: {state.energy} <br></br>
     DANCEABILITY: {state.danceability} <br></br>
     TEMPO: {state.tempo} BPM <br></br>
-    KEY: {state.key} <br></br>
-    MOOD {state.mood}
+    KEY: {state.key} {state.mode}<br></br>
+    MOOD {state.mood} 
     </p>
   </div>)
 }
