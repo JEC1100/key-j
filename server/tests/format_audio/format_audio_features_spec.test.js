@@ -1,4 +1,5 @@
-const formatAudioFeatures = require('../src/format_audio_features');
+const formatAudioFeatures =
+require('../../src/formatting/format_audio_features');
 
 let audioFeatures = {
   danceability: 1,

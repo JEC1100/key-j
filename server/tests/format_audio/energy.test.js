@@ -1,4 +1,4 @@
-const formatEnergy = require('../../src/format_audio/energy');
+const formatEnergy = require('../../src/formatting/energy');
 
 describe('formatting energy', () => {
   it("returns 'Low' for values below 0.3", () => {

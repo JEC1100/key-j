@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 let SpotifyWebApi = require('spotify-web-api-node');
-let formatAudioFeatures = require('./format_audio_features');
+let formatAudioFeatures = require('../formatting/format_audio_features');
 
 let spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,

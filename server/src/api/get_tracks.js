@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 let SpotifyWebApi = require('spotify-web-api-node');
-let formatSongs = require('./format_songs');
+let formatSongs = require('../formatting/format_songs');
 
 let spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
