@@ -1,4 +1,4 @@
-const formatSongs = require('../src/format_songs');
+const formatSongs = require('../src/formatting/format_songs');
 
 let tracks = [{
   name: 'Single Ladies',

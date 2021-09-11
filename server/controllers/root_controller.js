@@ -1,5 +1,5 @@
-const getTracks = require('../src/get_tracks');
-const audioFeatures = require('../src/get_track_audio_features');
+const getTracks = require('../src/api/get_tracks');
+const audioFeatures = require('../src/api/get_track_audio_features');
 
 exports.root = (req, res) => {
   getTracks(req.body.songName).then(data => {

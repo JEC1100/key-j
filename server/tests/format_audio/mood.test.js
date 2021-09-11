@@ -1,4 +1,4 @@
-const formatMood = require('../../src/format_audio/mood');
+const formatMood = require('../../src/formatting/mood');
 
 describe('formatting mood', () => {
   it("returns ':'(' for values below 0.2", () => {
