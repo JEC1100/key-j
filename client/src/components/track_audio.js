@@ -1,18 +1,18 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
 
-export const Hello = () => {
-  const [initialState, setInitialState] = useState([])
+export const TrackAudioFeatures = () => {
+  const [state, setState] = useState([])
 
   useEffect(() => {
-    fetch('/api/', {
+    fetch('/api/track_audio', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        songName: 'master exploder'
+        songId: '4DAaQ5InUO23d8yNRbB0Yj'
       })
     }).then(res => {
       if(res.ok){
@@ -20,10 +20,10 @@ export const Hello = () => {
       } else {
         console.log(res)
       }
-    }).then(jsonResponse => setInitialState(jsonResponse.songs))
+    }).then(response => setState(response.audioFeatures))
   },[])
-  // Should change unique key value to use UUID
+
   return(<div>
-    {initialState.length > 0 && initialState.map((e) => <li key={e.id}>{e.name} by {e.artist}</li>)}
+    <p> ENERGY: {state.energy} TEMPO: {state.tempo}</p>
   </div>)
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Hello } from './hello';
 import Searchbar from './Searchbar';
+import { TrackAudioFeatures } from './track_audio';
 
 const App = () => {
   const submitSongName = (songname) => {
@@ -14,6 +15,7 @@ const App = () => {
       </div>
       <div className="info-table">
         <Hello />
+        <TrackAudioFeatures />
       </div>
     </div>
   );
