@@ -1,22 +1,36 @@
-import React from 'react';
-import { Hello } from './hello';
+import React, { useState } from 'react';
+import SongInfo from './SongInfo';
 import Searchbar from './Searchbar';
 
 const App = () => {
+  const [songTitle, setSongTitle] = useState('');
+
   const submitSongName = (songname) => {
-   console.log(songname.value)
+    console.log(songname.value);
+    setSongTitle(songname.value);
   };
-  return (
-    <div className="app">
-      <h1>Key-J</h1>
-      <div className="searchbar">
-        <Searchbar submit={submitSongName} />
+
+  if (songTitle) {
+    return (
+      <div className="app">
+        <h1>Key-J</h1>
+        <div className="searchbar">
+          <Searchbar submit={submitSongName} />
+        </div>
+        <div className="info-table">{<SongInfo songTitle={songTitle} />}</div>
       </div>
-      <div className="info-table">
-        <Hello />
+    );
+  } else {
+    return (
+      <div className="app">
+        <h1>Key-J</h1>
+        <div className="searchbar">
+          <Searchbar submit={submitSongName} />
+        </div>
+        <div className="info-table"></div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default App;

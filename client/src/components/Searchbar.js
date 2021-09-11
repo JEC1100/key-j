@@ -11,8 +11,8 @@ const Searchbar = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.submit(songname)
-  }
+    props.submit(songname);
+  };
 
   return (
     <form onSubmit={handleSubmit} data-testid="form">
@@ -30,6 +30,6 @@ const Searchbar = (props) => {
 
 Searchbar.propTypes = {
   props: PropTypes.func,
-  submit: PropTypes.func
-}
+  submit: PropTypes.func,
+};
 export default Searchbar;
