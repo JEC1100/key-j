@@ -4,7 +4,7 @@ let songA = {
   danceability: 1,
   energy: 0.9,
   tempo: 100,
-  mood: 0.3,
+  valence: 0.3,
   key: 9,
   mode: 1,
 };
@@ -13,7 +13,7 @@ let songB = {
   danceability: 1,
   energy: 0.34,
   tempo: 160,
-  mood: 0.86,
+  valence: 0.86,
   key: 5,
   mode: 0,
 };
