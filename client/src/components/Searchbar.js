@@ -16,8 +16,9 @@ const Searchbar = (props) => {
 
   return (
     <form onSubmit={handleSubmit} data-testid="form">
-      <label htmlFor="songname">Song name</label>
+      <label htmlFor="songname"></label>
       <input
+        placeholder="Enter song"
         type="text"
         value={songname}
         onChange={handleChange}
