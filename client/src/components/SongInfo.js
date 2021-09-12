@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-
+import { v4 as uuidv4 } from 'uuid';
 
 const SongInfo = (props) => {
   const [initialState, setInitialState] = useState([]);
@@ -30,13 +30,20 @@ const SongInfo = (props) => {
       });
   }, [props.songTitle]);
 
-  return(
-  <div>
-    {error && <div>{error}</div>}
-    {initialState.length > 0 && initialState.map((e, i) => <li key={i}><a href={'/' + e.id} key='audio-features'>{e.name} by {e.artist}</a></li>)}
-  </div>
-  )
-}
+  return (
+    <div>
+      {error && <div>{error}</div>}
+      {initialState.length > 0 &&
+        initialState.map((e) => (
+          <li key={uuidv4()}>
+            <a href={'/' + e.id} key="audio-features">
+              {e.name} by {e.artist}
+            </a>
+          </li>
+        ))}
+    </div>
+  );
+};
 
 SongInfo.propTypes = {
   props: PropTypes.func,
