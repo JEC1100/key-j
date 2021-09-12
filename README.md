@@ -1,42 +1,57 @@
 # Key-J app
-An app to help DJs, musicians, music enthusiasts, access a song's key information
 
-## run servers
+Key-J is an app to help DJs, musicians and music enthusiasts access a song's key information, such as danceability, energy, mood, tempo, time signature and, of course, key.
 
-Have two tabs open in command line. For one cd into server and the other cd into client. In the tabe with server open, run:
+It was concepted and built by [Isobel Peppiatt](https://github.com/isobelpepp), [Matt Firmston](https://github.com/YoFirmy), [Luke Usher](https://github.com/lushcodes), [James Condon](https://github.com/JEC1100) and [Pav Rao](https://github.com/pav0107) as their final project at Makers.
+
+## Run servers
+
+Have two tabs open in the command line. In one tab, cd into server and run:
+
 ```
 npm run dev
 ```
-Then in the tabe with client open run:
+
+In the other tab, cd into client and run:
+
 ```
 npm start
 ```
 
-## Set up
-This project works in two parts; The front end is stored in the client folder, and the back end is stored in server folder. Once the project has been forked/cloned, each will need to be set up individually.
+## Set-up
 
-### Server set up
+This project works in two parts: the front end is stored in the client folder, and the back end is stored in server folder. Once the project has been forked/cloned, each will need to be set up individually.
+
+### Server set-up
+
 The back end runs on Node.js and first needs dependencies to be installed. First cd into server folder and then run:
+
 ```
 npm install
 ```
-Then cd into client folder and repeat this step, by again running:
+
+Then cd into client folder and repeat this step by, again, running:
+
 ```
 npm install
 ```
 
 ### Server tests
-Tests are run with Jest. To run tests, run:
+
+Tests use the Jest testing framework. To see the tests, run:
+
 ```
 npm test
 ```
 
-If you want to see the test coverage alongside the tests, run:
+If you want to see the test coverage, alongside the tests, run:
+
 ```
 npm test -- --coverage
 ```
 
 Linting is handled by ESLint and run automatically with the tests. If you want to run linting without the tests run:
+
 ```
 npm run pretest
 ```
@@ -124,4 +139,5 @@ I can save setlists/playlists and compare songs.
 ```
 
 ## Sequence Diagram
-![sequence_diagram](/images/sequence_diagram.key_j.png)
+
+![sequence_diagram](/images/updated_sequence_diagram.png)
