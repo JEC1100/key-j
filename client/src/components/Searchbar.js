@@ -1,25 +1,28 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useHistory } from "react-router-dom";
 
 const Searchbar = (props) => {
-  const [songname, setSongname] = useState({ value: '' });
+  const [songname, setSongname] = useState('');
+  let history = useHistory();
 
   const handleChange = (event) => {
     event.preventDefault();
-    setSongname({ value: event.target.value });
+    setSongname(event.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.submit(songname)
-  }
+    props.submit(songname);
+    history.push("/tracks");
+  };
 
   return (
     <form onSubmit={handleSubmit} data-testid="form">
       <label htmlFor="songname">Song name</label>
       <input
         type="text"
-        value={songname.value}
+        value={songname}
         onChange={handleChange}
         id="songname"
       />
@@ -30,6 +33,6 @@ const Searchbar = (props) => {
 
 Searchbar.propTypes = {
   props: PropTypes.func,
-  submit: PropTypes.func
-}
+  submit: PropTypes.func,
+};
 export default Searchbar;
