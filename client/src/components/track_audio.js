@@ -53,7 +53,7 @@ if (submitted === false){
          KEY: {state.key} {state.mode}<br></br>
         MOOD {state.mood} 
     </p>
-    <SongInfo songTitle={songTitle} redirect={false}/>
+    <SongInfo songTitle={songTitle} redirect={false} songAId={params.id}/>
   </div>
   )
 }

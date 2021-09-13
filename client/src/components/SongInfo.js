@@ -39,6 +39,8 @@ const SongInfo = (props) => {
       });
   }, [props.songTitle]);
 
+
+  if(props.redirect) {
   return (
     <div>
       {error && <div>{error}</div>}
@@ -52,12 +54,28 @@ const SongInfo = (props) => {
         ))}
     </div>
   );
+  }
+  else {
+    return (
+    <div>     
+    {error && <div>{error}</div>}
+    {initialState.length > 0 &&
+      initialState.map((e) => (
+        <li key={uuidv4()}>
+          <a href={'/' + props.songAId + '/' + e.id} key="audio-features">
+            {e.name} by {e.artist}
+          </a>
+        </li>
+      ))}</div>
+    )
+  }
 };
 
 SongInfo.propTypes = {
   props: PropTypes.func,
   songTitle: PropTypes.string,
   redirect: PropTypes.bool,
+  songAId: PropTypes.string,
 };
 
 export default SongInfo;
