@@ -35,24 +35,6 @@ export const CompareSongs = () => {
       });
   }, []);
 
-  const energySimilarity = calculateSimilarity(
-    songOneInfo.energy,
-    songTwoInfo.energy
-  );
-  const danceabilitySimilarity = calculateSimilarity(
-    songOneInfo.danceability,
-    songTwoInfo.danceability
-  );
-  const tempoSimilarity = calculateSimilarity(
-    songOneInfo.tempo,
-    songTwoInfo.tempo
-  );
-  const keySimilarity = calculateSimilarity(songOneInfo.key, songTwoInfo.key);
-  const moodSimilarity = calculateSimilarity(
-    songOneInfo.valence,
-    songTwoInfo.valence
-  );
-
   return (
     <div>
       <table>
@@ -65,31 +47,41 @@ export const CompareSongs = () => {
         <tr>
           <td>Energy</td>
           <td>{songOneInfo.energy}</td>
-          <td>{energySimilarity}%</td>
+          <td>
+            {calculateSimilarity(songOneInfo.energy, songTwoInfo.energy)}%
+          </td>
           <td>{songTwoInfo.energy}</td>
         </tr>
         <tr>
           <td>Danceability</td>
           <td>{songOneInfo.danceability}</td>
-          <td>{danceabilitySimilarity}%</td>
+          <td>
+            {calculateSimilarity(
+              songOneInfo.danceability,
+              songTwoInfo.danceability
+            )}
+            %
+          </td>
           <td>{songTwoInfo.danceability}</td>
         </tr>
         <tr>
           <td>Tempo</td>
           <td>{songOneInfo.tempo}</td>
-          <td>{tempoSimilarity}%</td>
+          <td>{calculateSimilarity(songOneInfo.tempo, songTwoInfo.tempo)}%</td>
           <td>{songTwoInfo.tempo}</td>
         </tr>
         <tr>
           <td>Key</td>
           <td>{formatKey(songOneInfo.key)}</td>
-          <td>{keySimilarity}%</td>
+          <td>{calculateSimilarity(songOneInfo.key, songTwoInfo.key)}%</td>
           <td>{formatKey(songTwoInfo.key)}</td>
         </tr>
         <tr>
           <td>Mood</td>
           <td>{songOneInfo.valence}</td>
-          <td>{moodSimilarity}%</td>
+          <td>
+            {calculateSimilarity(songOneInfo.valence, songTwoInfo.valence)}%
+          </td>
           <td>{songTwoInfo.valence}</td>
         </tr>
       </table>
