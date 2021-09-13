@@ -2,10 +2,12 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
+import { useParams } from "react-router-dom"
 
 const SongInfo = (props) => {
   const [initialState, setInitialState] = useState([]);
   const [error, setError] = useState(null);
+  const params = useParams()
 
   useEffect(() => {
     fetch('/api/', {
@@ -15,7 +17,7 @@ const SongInfo = (props) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        songName: props.songTitle,
+        songName: params.songTitle,
       }),
     })
       .then((res) => {

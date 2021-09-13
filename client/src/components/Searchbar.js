@@ -14,7 +14,7 @@ const Searchbar = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.submit(songname);
-    history.push("/tracks");
+    history.push("/tracks/" + songname);
   };
 
   return (
@@ -34,5 +34,6 @@ const Searchbar = (props) => {
 Searchbar.propTypes = {
   props: PropTypes.func,
   submit: PropTypes.func,
+  path: PropTypes.string,
 };
 export default Searchbar;
