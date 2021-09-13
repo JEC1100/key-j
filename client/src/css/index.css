@@ -33,6 +33,7 @@ input {
 
 .text-field:focus {
   outline: none;
+  background: white;
 }
 
 .text-field {
@@ -44,13 +45,13 @@ input {
 .submit {
   min-height: 100%;
   padding: 5px;
-  background: rgb(61, 86, 228);
+  background: rgb(214, 214, 214);
   float: right;
   width: 80px;
 }
 
 .submit:hover {
-  background: rgb(137, 130, 235);
+  background: rgb(198, 197, 212);
 }
 
 .form-container {
