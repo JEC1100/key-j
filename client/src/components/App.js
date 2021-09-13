@@ -13,7 +13,8 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div className="app">
+      <div>
       <BrowserRouter>
         <Switch>
         <Route
@@ -30,6 +31,7 @@ const App = () => {
           <Route component={CompareSongs} path="/:songAid/:songBid" />
         </Switch>
       </BrowserRouter>
+      </div>
     </div>
   );
 };

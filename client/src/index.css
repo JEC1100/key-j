@@ -11,3 +11,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(15deg, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  height: 100vh;
+}
+
+.search-bar {
+  border-radius: 4px;
+  overflow: hidden;
+  background: white;
+  width: 40vw;
+}
+
+input {
+  border: none;
+}
+
+.text-field:focus {
+  outline: none;
+  background: white;
+}
+
+.text-field {
+  margin-top: 4px;
+  margin-left: 5px;
+  width: 200px;
+}
+
+.submit {
+  min-height: 100%;
+  padding: 5px;
+  background: rgb(214, 214, 214);
+  float: right;
+  width: 80px;
+}
+
+.submit:hover {
+  background: rgb(198, 197, 212);
+}
+
+.form-container {
+  width: 70%;
+  max-width: 300px;
+}
