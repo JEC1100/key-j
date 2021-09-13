@@ -36,23 +36,32 @@ export const TrackAudioFeatures = () => {
 
 if (submitted === false){
   return(<div>
-    <p> ENERGY: {state.energy} <br></br>
-    DANCEABILITY: {state.danceability} <br></br>
-    TEMPO: {state.tempo} BPM <br></br>
-    KEY: {state.key} {state.mode}<br></br>
-    MOOD {state.mood} 
-    </p>
+    <div className='song-container'>
+    <div className='song-image'></div>
+      <div className='song-section'>
+        <p> ENERGY: {state.energy} <br></br>
+        DANCEABILITY: {state.danceability} <br></br>
+        TEMPO: {state.tempo} BPM <br></br>
+        KEY: {state.key} {state.mode}<br></br>
+        MOOD {state.mood} 
+        </p>
+      </div>
+    </div>
     <Searchbar submit={submitSongName} redirect={false} />
   </div>)
 } else { 
   return (
-  <div>
-    <p> ENERGY: {state.energy} <br></br>
+    <div>
+     <div className="song-container">
+      <div className='song-image'></div>
+        <div className='song-section'>
+        ENERGY: {state.energy}<br></br>
         DANCEABILITY: {state.danceability} <br></br>
         TEMPO: {state.tempo} BPM <br></br>
          KEY: {state.key} {state.mode}<br></br>
         MOOD {state.mood} 
-    </p>
+        </div>
+      </div>
     <SongInfo songTitle={songTitle} redirect={false} songAId={params.id}/>
   </div>
   )

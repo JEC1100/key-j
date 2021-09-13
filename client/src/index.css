@@ -29,18 +29,28 @@ code {
 
 /* --------  SEARCH BAR STYLING  -------- */
 
+form {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
 .search-bar {
   border-radius: 6px;
   overflow: hidden;
   background: white;
   width: 45vw;
   margin: 0;
+
 }
 
-input {
+input, input:focus {
   border: none;
   height: 7vh;
   font-size: 1.5rem;
+  background-color: #fff;
+}
+
+input:focus::-ms-value {
+  background-color: white; color:#000;
 }
 
 .text-field:focus {
@@ -62,6 +72,7 @@ input {
   float: right;
   width: 100px;
   height: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .submit:hover {
@@ -119,6 +130,12 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+
 .song-div:hover {
+  position: relative;
   color: #fff;
+}
+
+.song-features {
+  
 }
