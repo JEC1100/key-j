@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+const calculateSimilarity = require('../helperFunctions/calculate_similarity');
 
 export const CompareSongs = () => {
   let params = useParams();
@@ -33,6 +34,24 @@ export const CompareSongs = () => {
       });
   }, []);
 
+  const energySimilarity = calculateSimilarity(
+    songOneInfo.energy,
+    songTwoInfo.energy
+  );
+  const danceabilitySimilarity = calculateSimilarity(
+    songOneInfo.danceability,
+    songTwoInfo.danceability
+  );
+  const tempoSimilarity = calculateSimilarity(
+    songOneInfo.tempo,
+    songTwoInfo.tempo
+  );
+  const keySimilarity = calculateSimilarity(songOneInfo.key, songTwoInfo.key);
+  const moodSimilarity = calculateSimilarity(
+    songOneInfo.valence,
+    songTwoInfo.valence
+  );
+
   return (
     <div>
       <table>
@@ -45,31 +64,31 @@ export const CompareSongs = () => {
         <tr>
           <td>Energy</td>
           <td>{songOneInfo.energy}</td>
-          <td></td>
+          <td>{energySimilarity}%</td>
           <td>{songTwoInfo.energy}</td>
         </tr>
         <tr>
           <td>Danceability</td>
           <td>{songOneInfo.danceability}</td>
-          <td></td>
+          <td>{danceabilitySimilarity}%</td>
           <td>{songTwoInfo.danceability}</td>
         </tr>
         <tr>
           <td>Tempo</td>
           <td>{songOneInfo.tempo}</td>
-          <td></td>
+          <td>{tempoSimilarity}%</td>
           <td>{songTwoInfo.tempo}</td>
         </tr>
         <tr>
           <td>Key</td>
           <td>{songOneInfo.key}</td>
-          <td></td>
+          <td>{keySimilarity}%</td>
           <td>{songTwoInfo.key}</td>
         </tr>
         <tr>
           <td>Mood</td>
           <td>{songOneInfo.valence}</td>
-          <td></td>
+          <td>{moodSimilarity}%</td>
           <td>{songTwoInfo.valence}</td>
         </tr>
       </table>
