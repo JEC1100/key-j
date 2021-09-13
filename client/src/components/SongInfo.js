@@ -43,13 +43,28 @@ const SongInfo = (props) => {
   if(props.redirect) {
   return (
     <div>
+      <h1>Your Results</h1>
       {error && <div>{error}</div>}
       {initialState.length > 0 &&
         initialState.map((e) => (
           <div className='song-container' key={uuidv4()}>
+            <div className='song-image'></div>
+            <div className='song-section'>
               <a href={'/' + e.id} key="audio-features">
-                {e.name} by {e.artist}
+              <div className='song-div'>
+                Song:  
+              {e.name}
+              </div>
               </a>
+              
+              <a href={'/' + e.id} key="audio-features">
+              <div className='song-div'>
+                Artist:
+              
+              {e.artist}
+              </div>
+            </a>
+            </div>
           </div>
         ))}
     </div>
