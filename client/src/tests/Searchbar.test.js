@@ -4,6 +4,13 @@ import Searchbar from '../components/Searchbar';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom/extend-expect';
 
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useHistory: () => ({
+    push: jest.fn()
+  })
+}));
+
 test('a user can input a song title and the value is received', () => {
   render(<Searchbar />);
   const input = screen.getByLabelText(/Song name/i);

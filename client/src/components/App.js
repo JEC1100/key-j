@@ -1,20 +1,31 @@
-import React from 'react';
-import { Hello } from './hello';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import SongInfo from './SongInfo';
 import Searchbar from './Searchbar';
+import { TrackAudioFeatures } from './track_audio';
 
 const App = () => {
+  const [songTitle, setSongTitle] = useState('');
+
   const submitSongName = (songname) => {
-   console.log(songname.value)
+    setSongTitle(songname);
   };
+
   return (
-    <div className="app">
-      <h1>Key-J</h1>
-      <div className="searchbar">
-        <Searchbar submit={submitSongName} />
-      </div>
-      <div className="info-table">
-        <Hello />
-      </div>
+    <div className="App">
+      <BrowserRouter>
+        <div className="searchbar">
+          <Searchbar submit={submitSongName} />
+        </div>
+        <Switch>
+          <Route
+            component={() => <SongInfo songTitle={songTitle} />}
+            path="/tracks"
+            exact
+          />
+          <Route component={TrackAudioFeatures} path="/:id" />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 };
