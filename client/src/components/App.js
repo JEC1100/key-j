@@ -16,12 +16,12 @@ const App = () => {
       <BrowserRouter>
         <Switch>
         <Route
-            component={() => <Searchbar submit={submitSongName} />}
+            component={() => <Searchbar submit={submitSongName} redirect={true} />}
             path="/"
             exact
           />
           <Route
-            component={() => <SongInfo songTitle={songTitle} />}
+            component={() => <SongInfo songTitle={songTitle} redirect={true} />}
             path={"/tracks/:songTitle"}
             exact
           />

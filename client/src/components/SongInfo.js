@@ -9,6 +9,13 @@ const SongInfo = (props) => {
   const [error, setError] = useState(null);
   const params = useParams()
 
+  const songName = () => {
+    if(props.redirect){
+      return params.songTitle
+    } else
+    return props.songTitle
+  }
+
   useEffect(() => {
     fetch('/api/', {
       method: 'POST',
@@ -17,7 +24,7 @@ const SongInfo = (props) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        songName: params.songTitle,
+        songName: songName(),
       }),
     })
       .then((res) => {
@@ -50,6 +57,7 @@ const SongInfo = (props) => {
 SongInfo.propTypes = {
   props: PropTypes.func,
   songTitle: PropTypes.string,
+  redirect: PropTypes.bool,
 };
 
 export default SongInfo;
