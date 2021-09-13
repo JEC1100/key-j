@@ -37,8 +37,9 @@ form {
   border-radius: 6px;
   overflow: hidden;
   background: white;
-  width: 45vw;
+  min-width: 45vw;
   margin: 0;
+
 
 }
 
@@ -56,12 +57,14 @@ input:focus::-ms-value {
 .text-field:focus {
   outline: none;
   background: white;
+  
 }
 
 .text-field {
+  max-height: 3rem;
   margin-top: 0.35rem;
   margin-left: 1rem;
-  width: 35vw;
+  min-width: 35vw;
 }
 
 .submit {
