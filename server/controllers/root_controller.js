@@ -19,7 +19,8 @@ exports.trackAudio = (req, res) => {
 };
 
 exports.compare = (req, res) => {
-  getMultipleAudioFeatures(req.body.songAid, req.body.songBid).then((data) => {
+  let request = req.body.songId;
+  getMultipleAudioFeatures(request.songAid, request.songBid).then((data) => {
     res.json({
       songs: data,
     });
