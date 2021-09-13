@@ -52,16 +52,14 @@ const SongInfo = (props) => {
             <div className='song-section'>
               <a href={'/' + e.id} key="audio-features">
               <div className='song-div'>
-                Song:  
-              {e.name}
+                Song: <h2>{e.name}</h2>
               </div>
               </a>
               
               <a href={'/' + e.id} key="audio-features">
               <div className='song-div'>
-                Artist:
-              
-              {e.artist}
+
+                Artsit: <h2>{e.artist}</h2>
               </div>
             </a>
             </div>
