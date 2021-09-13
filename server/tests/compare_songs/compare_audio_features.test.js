@@ -1,4 +1,4 @@
-const compareSongs = require('../../src/compare_songs/compare_audio_features');
+const compareSongs = require('../../src/compare_songs/compare_songs');
 
 let songA = {
   danceability: 1,
