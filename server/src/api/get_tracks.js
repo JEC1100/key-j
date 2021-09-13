@@ -20,7 +20,7 @@ const getTracks = (songName) => {
         res(formatSongs(tracks));
       },
       function(err) {
-        rej('Something went wrong!', err);
+        rej('Something went wrong and its all Pavs fault!', err);
       });
   });
   return response;
