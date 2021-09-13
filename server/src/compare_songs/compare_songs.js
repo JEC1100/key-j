@@ -1,5 +1,5 @@
 const calculateDifference = require('./calculate_difference');
-const compareTempo = require('./tempo');
+// const compareTempo = require('./tempo');
 
 const compareAudioFeatures = (songA, songB) => {
   return {
@@ -7,9 +7,10 @@ const compareAudioFeatures = (songA, songB) => {
     energy: calculateDifference(songA.energy, songB.energy),
     mood: calculateDifference(songA.valence, songB.valence),
     key: calculateDifference(songA.key, songB.key),
-    tempo: compareTempo(songA.tempo, songB.tempo),
+    tempo: calculateDifference(songA.tempo, songB.tempo),
   };
 
 };
 
 module.exports = compareAudioFeatures;
+
