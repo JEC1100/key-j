@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import SongInfo from './SongInfo';
 import Searchbar from './Searchbar';
 import { TrackAudioFeatures } from './track_audio';
-import { CompareSongs} from './CompareSongs';
+import { CompareSongs } from './CompareSongs';
 
 const App = () => {
   const [songTitle, setSongTitle] = useState('');
@@ -15,28 +15,32 @@ const App = () => {
   return (
     <div className="background">
       <div className="app">
-        <a href='/'>
+        <a href="/">
           <h1>| KEY-J |</h1>
         </a>
-          <BrowserRouter>
-            <Switch>
+        <BrowserRouter>
+          <Switch>
             <Route
-                component={() => <Searchbar submit={submitSongName} redirect={true} />}
-                path="/"
-                exact
-              />
-              <Route
-                component={() => <SongInfo songTitle={songTitle} redirect={true} />}
-                path={"/tracks/:songTitle"}
-                exact
-              />
-              <Route component={TrackAudioFeatures} path="/:id" exact />
-              <Route component={CompareSongs} path="/:songAid/:songBid" />
-            </Switch>
-          </BrowserRouter>
-          <section className='blue'></section>
-        </div>
+              component={() => (
+                <Searchbar submit={submitSongName} redirect={true} />
+              )}
+              path="/"
+              exact
+            />
+            <Route
+              component={() => (
+                <SongInfo songTitle={songTitle} redirect={true} />
+              )}
+              path={'/tracks/:songTitle'}
+              exact
+            />
+            <Route component={TrackAudioFeatures} path="/:id" exact />
+            <Route component={CompareSongs} path="/:songAid/:songBid" />
+          </Switch>
+        </BrowserRouter>
+        <section className="blue"></section>
       </div>
+    </div>
   );
 };
 

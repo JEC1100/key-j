@@ -55,6 +55,7 @@ h1 {
 form {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  max-height: 60px;
 }
 
 .search-bar {
@@ -177,9 +178,26 @@ input:focus {
   font-size: 1.8rem;
   font-family: 'Glory', sans-serif;
   margin-top: 10px;
+  margin-bottom: 20px;
   border-radius: 6px;
   text-align: left;
   padding-left: 15px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.similar-songs-list {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-top: 100px;
+  width: 80vw;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.similar-song a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
 }
