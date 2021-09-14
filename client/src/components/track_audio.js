@@ -39,6 +39,7 @@ if (submitted === false){
     <div className='song-container'>
     <div className='song-image'></div>
       <div className='song-section'>
+      <h2>Song Statistics</h2>
         <p> ENERGY: {state.energy} <br></br>
         DANCEABILITY: {state.danceability} <br></br>
         TEMPO: {state.tempo} BPM <br></br>
