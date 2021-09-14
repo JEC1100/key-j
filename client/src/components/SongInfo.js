@@ -77,13 +77,13 @@ const SongInfo = (props) => {
         <div className='song-container' key={uuidv4()}>
         <div className='song-image'></div>
         <div className='song-section'>
-          <a href={'/' + e.id} key="audio-features">
+          <a href={'/' + props.songAId + '/' + e.id} key="audio-features">
           <div className='song-div'>
             Song: <h2>{e.name}</h2>
           </div>
           </a>
           
-          <a href={'/' + e.id} key="audio-features">
+          <a href={'/' + props.songAId + '/' + e.id} key="audio-features">
             <div className='song-div'>
 
               Artist: <h2>{e.artist}</h2>
