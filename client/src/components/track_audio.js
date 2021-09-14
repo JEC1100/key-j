@@ -53,7 +53,7 @@ if (submitted === false){
   return (
     <div>
      <div className="song-container">
-      <div className='song-image'></div>
+     <div className='song-image'></div>
         <div className='song-section'>
         ENERGY: {state.energy}<br></br>
         DANCEABILITY: {state.danceability} <br></br>
@@ -62,8 +62,8 @@ if (submitted === false){
         MOOD {state.mood} 
         </div>
       </div>
-    <SongInfo songTitle={songTitle} redirect={false} songAId={params.id}/>
-  </div>
+      <SongInfo songTitle={songTitle} redirect={false} songAId={params.id}/>
+    </div>
   )
 }
 }

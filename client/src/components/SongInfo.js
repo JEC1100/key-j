@@ -57,11 +57,11 @@ const SongInfo = (props) => {
               </a>
               
               <a href={'/' + e.id} key="audio-features">
-              <div className='song-div'>
+                <div className='song-div'>
 
-                Artsit: <h2>{e.artist}</h2>
-              </div>
-            </a>
+                  Artist: <h2>{e.artist}</h2>
+                </div>
+              </a>
             </div>
           </div>
         ))}
