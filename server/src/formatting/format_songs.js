@@ -1,10 +1,3 @@
-// const smallestAlbumImage = (song) => {
-//   song.album.images.reduce(smallest, image) => {
-//     if (image.height < smallest.height) return image,
-//     return smallest
-//   }
-// }
-    
 const formatSongs = (songs) => {
   let arr = [];
   songs.forEach(song => {

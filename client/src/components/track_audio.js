@@ -43,7 +43,9 @@ export const TrackAudioFeatures = () => {
 
   return(<div>
     <div className='song-container'>
-    <div className='song-image'></div>
+    <div className='song-image'>
+    <img src={"https://i.scdn.co/image/" + params.albumUrl} style={{ height: 240 }}/>
+    </div>
       <div className='song-section'>
       <h2>Song Statistics</h2>
         <p> ENERGY: {state.energy} <br></br>
