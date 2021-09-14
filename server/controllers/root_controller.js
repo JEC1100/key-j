@@ -41,7 +41,7 @@ exports.compare = (req, res) => {
 exports.artistTopTracks = (req, res) => {
   artistTopTracks(req.body.artistId).then((data) => {
     res.json({
-      artist_tracks: data
-    })
-  })
-}
+      artist_tracks: data,
+    });
+  });
+};

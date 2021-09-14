@@ -6,7 +6,7 @@ describe('Key-j', () => {
   });
 
   it('should display "Key-J" text on page', async() => {
-    await expect(page).toMatch('Key-J');
+    await expect(page).toMatch('KEY-J');
   });
 
   it('can search for songs', async() => {
