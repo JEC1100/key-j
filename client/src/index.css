@@ -45,6 +45,13 @@ form {
 
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: none;
+  -webkit-box-shadow: 0 0 0 50px white inset;
+}
+
 input, input:focus {
   border: none;
   height: 7vh;
@@ -95,6 +102,7 @@ align-items: center;
 width: 50vw;
 margin: 1rem;
 padding: 2rem;
+border-radius: 10px;
 background-color: #051937;
 box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
@@ -111,6 +119,7 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 .song-section {
   min-width: 34vw;
   padding: 1rem;
+  border-radius: 10px;
   background-color: #004D7A;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -125,6 +134,7 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 
 .song-div {
   text-align: center;
+  border-radius: 10px;
   position: relative;
   margin-bottom: 1rem;
   background-color: #051937;

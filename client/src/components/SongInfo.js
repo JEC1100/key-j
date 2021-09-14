@@ -74,11 +74,23 @@ const SongInfo = (props) => {
     {error && <div>{error}</div>}
     {initialState.length > 0 &&
       initialState.map((e) => (
-        <li key={uuidv4()}>
-          <a href={'/' + props.songAId + '/' + e.id} key="audio-features">
-            {e.name} by {e.artist}
+        <div className='song-container' key={uuidv4()}>
+        <div className='song-image'></div>
+        <div className='song-section'>
+          <a href={'/' + e.id} key="audio-features">
+          <div className='song-div'>
+            Song: <h2>{e.name}</h2>
+          </div>
           </a>
-        </li>
+          
+          <a href={'/' + e.id} key="audio-features">
+            <div className='song-div'>
+
+              Artist: <h2>{e.artist}</h2>
+            </div>
+          </a>
+        </div>
+      </div>
       ))}</div>
     )
   }
