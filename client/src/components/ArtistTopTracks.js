@@ -29,6 +29,7 @@ export const ArtistTopTracks = () => {
 
   return (
     <div>
+      <h1>Top 10 songs by {params.artistName}</h1>
       <div className='breaker'></div>
       {state.length > 0 &&
         state.map((e) => (
@@ -45,7 +46,6 @@ export const ArtistTopTracks = () => {
               
                 <div className='song-div'>
                   Album: <h2>{e.album}</h2>
-                  Artist: <h2>{e.artist}</h2>
                 </div>
             </div>
           </div>

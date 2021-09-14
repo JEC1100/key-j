@@ -33,7 +33,7 @@ const App = () => {
               />
               <Route component={TrackAudioFeatures} path="/track/:id/:albumUrl" exact />
               <Route component={CompareSongs} path="/compare/:songAid/:songBid" exact />
-              <Route component={ArtistTopTracks} path="/artist/:artistId" exact />
+              <Route component={ArtistTopTracks} path="/artist/:artistId/:artistName" exact />
             </Switch>
           </BrowserRouter>
           <section className='blue'></section>

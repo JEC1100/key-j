@@ -58,7 +58,7 @@ const SongInfo = (props) => {
               </div>
               </a>
               
-              <a href={'/artist/' + e.artistId} key={uuidv4()}>
+              <a href={'/artist/' + e.artistId + '/' + e.artist} key={uuidv4()}>
                 <div className='song-div'>
 
                   Artist: <h2>{e.artist}</h2>
