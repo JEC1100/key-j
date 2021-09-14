@@ -6,13 +6,7 @@ It was concepted and built by [Isobel Peppiatt](https://github.com/isobelpepp), 
 
 ## Run servers
 
-Have two tabs open in the command line. In one tab, cd into server and run:
-
-```
-npm run dev
-```
-
-In the other tab, cd into client and run:
+First cd into server folder and then run:
 
 ```
 npm start
@@ -37,6 +31,8 @@ npm install
 ```
 
 ### Server tests
+
+End to end tests are included in the server side. This means that you have to run the servers first (see [Run Servers](#run-servers)) in a seperate window/tab in your command line)
 
 Tests use the Jest testing framework. To see the tests, run:
 
@@ -140,4 +136,4 @@ I can save setlists/playlists and compare songs.
 
 ## Sequence Diagram
 
-![sequence_diagram](/images/updated_sequence_diagram.png)
+![sequence_diagram](/images/sequence_diagram.key_j.png)
