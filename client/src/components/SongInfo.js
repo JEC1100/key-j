@@ -43,7 +43,7 @@ const SongInfo = (props) => {
   if(props.redirect) {
   return (
     <div>
-      <h1>Your Results</h1>
+      <div className='breaker'></div>
       {error && <div>{error}</div>}
       {initialState.length > 0 &&
         initialState.map((e) => (

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Glory&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap');
+
 
 body {
   margin: 0;
@@ -27,6 +29,25 @@ code {
   background-size: cover;
   min-height: 100vh;
   box-shadow: inset 0 0 1.5rem black;
+}
+
+.breaker {
+  min-height: 15vh;
+}
+
+h1 {
+  background-color: #004D7A;
+  color: aliceblue;
+  letter-spacing: 10px;
+  font-family: 'Hind', sans-serif;
+  outline: white;
+  font-size: 3rem;
+  position: fixed;
+  top:20px;
+  left: 70px;
+  padding: 20px;
+ border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 
