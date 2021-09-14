@@ -2,6 +2,7 @@ const getTracks = require('../src/api/get_tracks');
 const audioFeatures = require('../src/api/get_track_audio_features');
 const songsLikeThis = require('../src/api/get_songs_like_this');
 const getMultipleAudioFeatures = require('../src/api/get_multiple_audio_features');
+const artistTopTracks = require('../src/api/get_artists_top_tracks');
 
 exports.root = (req, res) => {
   getTracks(req.body.songName).then((data) => {
@@ -35,3 +36,11 @@ exports.compare = (req, res) => {
     });
   });
 };
+
+exports.artistTopTracks = (req, res) => {
+  artistTopTracks(req.body.artistId).then((data) => {
+    res.json({
+      artist_tracks: data
+    })
+  })
+}
