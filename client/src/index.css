@@ -30,6 +30,40 @@ code {
   box-shadow: inset 0 0 1.5rem black;
 }
 
+.nav a {
+  text-decoration: none;
+}
+
+.nav button {
+  border: none;
+  padding: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button h1 {
+  margin: 0;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 70px;
+}
+
+.home {
+  position: fixed;
+  top: 20px;
+  right: 300px;
+}
+
+/* Not sure why at the moment, but back button wasn't in correct position so I hard-coded it further down */
+.back {
+  position: fixed;
+  top: 50px;
+  right: 70px;
+}
+
 .breaker {
   min-height: 250px;
 }
@@ -41,9 +75,6 @@ h1 {
   font-family: 'Hind', sans-serif;
   outline: white;
   font-size: 3rem;
-  position: fixed;
-  top: 20px;
-  left: 70px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
