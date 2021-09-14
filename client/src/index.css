@@ -21,7 +21,10 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #a8eb12;
+  background-image: url(https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
   box-shadow: inset 0 0 1.5rem black;
 }
@@ -99,20 +102,20 @@ input, input:focus {
 display: flex;
 justify-content: flex-start;
 align-items: center;
-width: 50vw;
+min-width: 40vw;
 margin: 1rem;
-padding: 2rem;
+padding:2rem;
 border-radius: 10px;
-background-color: #051937;
+background-color: rgba(0, 77, 122, 0.7);
 box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
 
 }
 
 .song-image {
-  border: #004D7A 2px solid;
-  height:11rem;
-  width: 11rem;
+  border: aliceblue 2px solid;
+  min-height:11rem;
+  min-width: 11rem;
   margin-right: 2rem;
 }
 
@@ -120,24 +123,23 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   min-width: 34vw;
   padding: 1rem;
   border-radius: 10px;
-  background-color: #004D7A;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .song-section, .song-section a {
 
-  color: #a8eb12;
+  color: #051937;
   text-decoration: none;
   font-size: 1.2rem;
 }
 
 
 .song-div {
+  position: relative;
   text-align: center;
   border-radius: 10px;
   position: relative;
   margin-bottom: 1rem;
-  background-color: #051937;
+  background-color: rgb(229, 231, 233);
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -145,5 +147,5 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 
 .song-div:hover {
   position: relative;
-  color: #fff;
+  top:2px;
 }

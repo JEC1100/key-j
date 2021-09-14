@@ -13,26 +13,27 @@ const App = () => {
   };
 
   return (
+    <div className="background">
     <div className="app">
-       <div>
-        <BrowserRouter>
-          <Switch>
-          <Route
-              component={() => <Searchbar submit={submitSongName} redirect={true} />}
-              path="/"
-              exact
-            />
+          <BrowserRouter>
+            <Switch>
             <Route
-              component={() => <SongInfo songTitle={songTitle} redirect={true} />}
-              path={"/tracks/:songTitle"}
-              exact
-            />
-            <Route component={TrackAudioFeatures} path="/:id" exact />
-            <Route component={CompareSongs} path="/:songAid/:songBid" />
-          </Switch>
-        </BrowserRouter>
+                component={() => <Searchbar submit={submitSongName} redirect={true} />}
+                path="/"
+                exact
+              />
+              <Route
+                component={() => <SongInfo songTitle={songTitle} redirect={true} />}
+                path={"/tracks/:songTitle"}
+                exact
+              />
+              <Route component={TrackAudioFeatures} path="/:id" exact />
+              <Route component={CompareSongs} path="/:songAid/:songBid" />
+            </Switch>
+          </BrowserRouter>
+          <section className='blue'></section>
+        </div>
       </div>
-    </div>
   );
 };
 
