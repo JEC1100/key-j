@@ -1,4 +1,4 @@
-const formatKey = require('../../src/formatting/key');
+const formatKey = require('../../helperFunctions/formatting/key');
 
 describe('formatting key', () => {
   it('returns a key for each number', () => {
