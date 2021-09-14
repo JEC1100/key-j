@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 let SpotifyWebApi = require('spotify-web-api-node');
+let formatSongs = require('../formatting/format_songs');
 
 let spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
@@ -15,8 +16,8 @@ const artistTopTracks = (artistId) => {
         return spotifyApi.getArtistTopTracks(artistId, 'GB');
       })
       .then(function(data) {
-        const artist_tracks = data.body;
-        res(artist_tracks);
+        const artist_tracks = data.body.tracks;
+        res(formatSongs(artist_tracks));
       },
       function(err) {
         rej('Something went wrong!', err);

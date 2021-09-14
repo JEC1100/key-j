@@ -1,9 +1,11 @@
 import React from 'react';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import { useParams } from "react-router-dom"
+import { v4 as uuidv4 } from 'uuid';
 
 export const ArtistTopTracks = () => {
   
+  const [state, setState] = useState([]);
   const params = useParams()
 
   useEffect(() => {
@@ -14,7 +16,7 @@ export const ArtistTopTracks = () => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        song: params.artistId
+        artistId: params.artistId
       })
     }).then(res => {
       if(res.ok){
@@ -22,24 +24,34 @@ export const ArtistTopTracks = () => {
       } else {
         console.log(res)
       }
-    }).then(response => console.log(response))
+    }).then(response => setState(response.artist_tracks))
   },[])
 
-  return(
-    <div>Hello!</div>
-  )
-  // return(
-  //   <div>
-  //   {state.length > 0 &&
-  //     state.map((e, i) => (
-  //       <li key={i}>
-  //         <a href={'/' + songid + '/' + e.id} key="audio-features">
-  //           {e.name} by {e.artist}
-  //         </a>
-  //       </li>
-  //     ))}
-  // </div>)
+  return (
+    <div>
+      <div className='breaker'></div>
+      {state.length > 0 &&
+        state.map((e) => (
+          <div className='song-container' key={uuidv4()}>
+            <div className='song-image'>
+              <img src={e.albumUrl} style={{ height: 240 }}/>
+            </div>
+            <div className='song-section'>
+            <a href={'/track/' + e.id + '/' + e.albumUrl.split('/')[4]} key={uuidv4()}>
+              <div className='song-div'>
+                Song: <h2>{e.name}</h2>
+              </div>
+              </a>
+              
+                <div className='song-div'>
+                  Album: <h2>{e.album}</h2>
+                  Artist: <h2>{e.artist}</h2>
+                </div>
+            </div>
+          </div>
+        ))}
+    </div>
+  );
 }
-
 
   export default ArtistTopTracks;
