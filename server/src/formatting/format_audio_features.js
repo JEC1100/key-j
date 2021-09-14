@@ -1,6 +1,7 @@
-const formatEnergy = require('./format_audio/energy');
-const formatMood = require('./format_audio/mood');
-const formatDanceability = require('./format_audio/danceability');
+const formatEnergy = require('./energy');
+const formatMood = require('./mood');
+const formatDanceability = require('./danceability');
+const formatKey = require('./key');
 
 const formatAudioFeatures = (features) => {
   return {
@@ -8,8 +9,8 @@ const formatAudioFeatures = (features) => {
     energy: formatEnergy(features.energy),
     tempo: features.tempo,
     mood: formatMood(features.valence),
-    key: features.key,
-    mode: features.mode,
+    key: formatKey(features.key),
+    mode: features.mode === 1 ? 'Major' : 'Minor',
   };
 };
 

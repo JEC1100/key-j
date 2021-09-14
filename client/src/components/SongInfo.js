@@ -2,10 +2,19 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
+import { useParams } from "react-router-dom"
 
 const SongInfo = (props) => {
   const [initialState, setInitialState] = useState([]);
   const [error, setError] = useState(null);
+  const params = useParams()
+
+  const songName = () => {
+    if(props.redirect){
+      return params.songTitle
+    } else
+    return props.songTitle
+  }
 
   useEffect(() => {
     fetch('/api/', {
@@ -15,7 +24,7 @@ const SongInfo = (props) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        songName: props.songTitle,
+        songName: songName(),
       }),
     })
       .then((res) => {
@@ -30,6 +39,8 @@ const SongInfo = (props) => {
       });
   }, [props.songTitle]);
 
+
+  if(props.redirect) {
   return (
     <div>
       {error && <div>{error}</div>}
@@ -43,11 +54,28 @@ const SongInfo = (props) => {
         ))}
     </div>
   );
+  }
+  else {
+    return (
+    <div>     
+    {error && <div>{error}</div>}
+    {initialState.length > 0 &&
+      initialState.map((e) => (
+        <li key={uuidv4()}>
+          <a href={'/' + props.songAId + '/' + e.id} key="audio-features">
+            {e.name} by {e.artist}
+          </a>
+        </li>
+      ))}</div>
+    )
+  }
 };
 
 SongInfo.propTypes = {
   props: PropTypes.func,
   songTitle: PropTypes.string,
+  redirect: PropTypes.bool,
+  songAId: PropTypes.string,
 };
 
 export default SongInfo;
