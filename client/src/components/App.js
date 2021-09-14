@@ -12,7 +12,7 @@ const App = () => {
     setSongTitle(songname);
   };
 
-  const searchbarMessage = 'Enter song';
+  const searchbarMessage = 'Enter a song to find its key characteristics';
 
   return (
     <div className="background">

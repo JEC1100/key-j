@@ -28,6 +28,7 @@ const Searchbar = (props) => {
         onChange={handleChange}
         id="songname"
         placeholder={props.placeholder}
+        autoFocus
       />
       <input className="submit" type="submit" value="Submit" />
     </form>

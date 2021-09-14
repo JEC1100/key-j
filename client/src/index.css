@@ -164,7 +164,6 @@ input:focus {
 
 .song-div:hover {
   position: relative;
-  top: 2px;
 }
 
 .similar-songs-button {
