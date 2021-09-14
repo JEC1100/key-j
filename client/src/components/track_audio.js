@@ -53,7 +53,7 @@ export const TrackAudioFeatures = () => {
     <p> ENERGY: {formatEnergy(state.energy)}<br></br>
     DANCEABILITY: {formatDanceability(state.danceability)} <br></br>
     TEMPO: {state.tempo} BPM <br></br>
-    KEY: {formatKey(state.key)} {state.mode}<br></br>
+    KEY: {formatKey(state.key)} {state.mode === 1 ? 'Major' : 'Minor'}<br></br>
     MOOD: {formatMood(state.valence)} 
     </p>
     <Searchbar submit={submitSongName} redirect={false} />

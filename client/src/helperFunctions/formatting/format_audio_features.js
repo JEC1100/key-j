@@ -10,7 +10,6 @@ const formatAudioFeatures = (features) => {
     tempo: features.tempo,
     mood: formatMood(features.valence),
     key: formatKey(features.key),
-    mode: features.mode === 1 ? 'Major' : 'Minor',
   };
 };
 
