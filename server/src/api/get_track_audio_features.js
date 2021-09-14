@@ -17,7 +17,7 @@ const audioFeatures = (songId) => {
       })
       .then(function(data) {
         const audio_features = data.body;
-        res(formatAudioFeatures(audio_features));
+        res(audio_features);
       },
       function(err) {
         rej('Something went wrong!', err);
