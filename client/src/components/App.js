@@ -14,10 +14,10 @@ const App = () => {
 
   return (
     <div className="background">
-    <div className="app">
-      <div>
-    <h1>| KEY-J |</h1>
-    </div>
+      <div className="app">
+        <a href='/'>
+          <h1>| KEY-J |</h1>
+        </a>
           <BrowserRouter>
             <Switch>
             <Route
