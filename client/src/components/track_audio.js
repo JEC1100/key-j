@@ -22,6 +22,8 @@ export const TrackAudioFeatures = () => {
     setCompareSongs(true);
   };
 
+  const searchbarMessage = 'Enter another song to compare track info';
+
   useEffect(() => {
     fetch('/api/track_audio', {
       method: 'POST',
@@ -60,7 +62,11 @@ export const TrackAudioFeatures = () => {
           </p>
         </div>
       </div>
-      <Searchbar submit={submitSongName} redirect={false} />
+      <Searchbar
+        submit={submitSongName}
+        redirect={false}
+        placeholder={searchbarMessage}
+      />
       <button className="similar-songs-button" onClick={seeSimilarSongs}>
         See Similar Songs
       </button>

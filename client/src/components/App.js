@@ -12,6 +12,8 @@ const App = () => {
     setSongTitle(songname);
   };
 
+  const searchbarMessage = 'Enter song';
+
   return (
     <div className="background">
       <div className="app">
@@ -22,7 +24,11 @@ const App = () => {
           <Switch>
             <Route
               component={() => (
-                <Searchbar submit={submitSongName} redirect={true} />
+                <Searchbar
+                  submit={submitSongName}
+                  placeholder={searchbarMessage}
+                  redirect={true}
+                />
               )}
               path="/"
               exact
