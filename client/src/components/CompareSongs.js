@@ -7,7 +7,6 @@ import { useParams } from 'react-router-dom';
 
 export const CompareSongs = () => {
   let params = useParams();
-
   const [songOneInfo, setSongOneInfo] = useState({});
   const [songTwoInfo, setSongTwoInfo] = useState({});
 
@@ -40,9 +39,12 @@ export const CompareSongs = () => {
   return (
     <div className='song-compare-container'>
       <div className='song-container'>
-        <div className='song-image'></div>
+        <div className='song-image'>
+        <img src={"https://i.scdn.co/image/" + params.songAalbumUrl} style={{ height: 200 }}/>
+        </div>
       <div className='song-info'>
-      <h2>Song Statistics</h2>
+      <h2>{params.songAName}</h2>
+      <h4>Song Statistics:</h4>
         <p> ENERGY: {} <br></br>
         DANCEABILITY: {} <br></br>
         TEMPO: {} BPM <br></br>
@@ -85,9 +87,12 @@ export const CompareSongs = () => {
         </div>
       </div>
       <div className='song-container'>
-    <div className='song-image'></div>
+    <div className='song-image'>
+      <img src={"https://i.scdn.co/image/" + params.songBalbumUrl} style={{ height: 180 }}/>
+    </div>
       <div className='song-info'>
-      <h2>Song Statistics</h2>
+        <h2>{params.songBName}</h2>
+        <h4>Song Statistics</h4>
         <p> ENERGY: {} <br></br>
         DANCEABILITY: {} <br></br>
         TEMPO: {} BPM <br></br>

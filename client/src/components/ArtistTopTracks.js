@@ -39,7 +39,7 @@ export const ArtistTopTracks = () => {
               <img src={e.albumUrl} style={{ height: 240 }}/>
             </div>
             <div className='song-section'>
-            <a href={'/track/' + e.id + '/' + e.albumUrl.split('/')[4]} key={uuidv4()}>
+            <a href={'/track/' + e.id + '/' + e.albumUrl.split('/')[4] + '/' + e.name} key={uuidv4()}>
               <div className='song-div'>
                 Song: <h2>{e.name}</h2>
               </div>
