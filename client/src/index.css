@@ -39,6 +39,14 @@ header {
   min-height: 20vh;
 }
 
+footer {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  font-size: 1.5rem;
+  color: white;
+}
+
 .logo {
   position: fixed;
   top: 20px;
