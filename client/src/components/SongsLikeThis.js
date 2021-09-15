@@ -37,7 +37,10 @@ export const SongsLikeThis = (props) => {
       {state.length > 0 &&
         state.map((e, i) => (
           <div className="similar-song" key={i}>
-            <a href={'/compare/' + songid + '/' + params.albumUrl + '/'+ params.trackName + '/' + e.id + '/' + e.album.images[0].url.split('/')[4]  + '/' + e.name} key={uuidv4()}>
+            <a href={'/compare/' + 
+            songid + '/' + params.albumUrl + '/' + 
+            params.trackName + '/' + e.id + '/' + 
+            e.album.images[0].url.split('/')[4]  + '/' + e.name} key={uuidv4()}>
               {e.name} by {e.artists[0].name}
             </a>
           </div>
