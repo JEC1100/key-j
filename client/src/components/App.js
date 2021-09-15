@@ -19,14 +19,14 @@ const App = () => {
   return (
     <div className="background">
       <div className="app">
-        <header>
-          <div className="logo">
-            <a href="/">
-              <h1>| KEY-J |</h1>
-            </a>
-          </div>
-        </header>
         <main>
+          <header>
+            <div className="logo">
+              <a href="/">
+                <h1>| KEY-J |</h1>
+              </a>
+            </div>
+          </header>
           <BrowserRouter>
             <Switch>
               <Route

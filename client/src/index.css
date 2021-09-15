@@ -43,7 +43,7 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 25px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
 }
 
@@ -51,6 +51,10 @@ footer {
   position: fixed;
   top: 20px;
   left: 70px;
+}
+
+.logo h1 {
+  font-size: 1.3rem;
 }
 
 .logo a {
@@ -100,7 +104,7 @@ input:-webkit-autofill:focus {
 input {
   border: none;
   height: 7vh;
-  font-size: 1.8rem;
+  font-size: 1rem;
   font-family: 'Glory', sans-serif;
 }
 
@@ -273,4 +277,62 @@ input {
 
 .similar-song {
   padding-top: 10px;
+}
+
+@media screen and (max-width: 1600px) {
+  .song-container {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+  }
+  .song-compare-container {
+    min-width: 400px;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .song-container {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+  }
+  footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .song-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .song-container {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+  }
 }
