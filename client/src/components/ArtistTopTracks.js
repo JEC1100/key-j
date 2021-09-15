@@ -29,8 +29,9 @@ export const ArtistTopTracks = () => {
 
   return (
     <div>
-      <h1>Top 10 songs by {params.artistName}</h1>
-      <div className='breaker'></div>
+      <div className='song-container'>
+      <h2>Top 10 songs by {params.artistName}</h2>
+      </div>
       {state.length > 0 &&
         state.map((e) => (
           <div className='song-container' key={uuidv4()}>
