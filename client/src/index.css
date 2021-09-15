@@ -133,14 +133,15 @@ input {
 /* --------  SONG LIST STYLING  -------- */
 
 .song-container {
-display: flex;
-justify-content: flex-start;
-align-items: center;
-margin: 1rem;
-padding:2rem;
-border-radius: 10px;
-background-color: rgba(0, 77, 122, 0.7);
-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: rgba(0, 77, 122, 0.7);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .song-image {
@@ -187,15 +188,16 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   align-items: center;
 }
 .song-compare-div {
-display: flex;
-flex-direction: column;
-align-items: center;
-min-width: 20vw;
-margin: 1rem;
-padding:2rem;
-border-radius: 10px;
-background-color: aliceblue;
-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 20vw;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: aliceblue;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .chart-row {
@@ -203,11 +205,12 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .chart-bar {
   margin: 5px;
-  width: 6vw;
+  width: 10vw;
   height: 6px;
   background: #051937;
 }
@@ -239,7 +242,7 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 
 .similar-song a {
   text-decoration: none;
-  color:#051937;
+  color: #051937;
   font-size: 1.5rem;
 }
 

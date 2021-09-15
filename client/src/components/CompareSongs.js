@@ -38,6 +38,26 @@ export const CompareSongs = () => {
       });
   }, []);
 
+  const energyBarLength = (songInfo) => {
+    return songInfo.energy * 10;
+  };
+
+  const danceabilityBarLength = (songInfo) => {
+    return songInfo.danceability * 10;
+  };
+
+  const tempoBarLength = (songInfo) => {
+    return (songInfo.tempo * 10) / 250;
+  };
+
+  const keyBarLength = (songInfo) => {
+    return (songInfo.key * 10) / 12;
+  };
+
+  const moodBarLength = (songInfo) => {
+    return songInfo.valence * 10;
+  };
+
   return (
     <div className="song-compare-container">
       <div className="song-container">
@@ -65,13 +85,22 @@ export const CompareSongs = () => {
         <h2>Comparison</h2>
         Energy
         <div className="chart-row">
-          <div className="chart-bar"></div>
+          <div
+            className="chart-bar"
+            style={{ width: `${energyBarLength(songOneInfo)}vw` }}
+          ></div>
           <p>{calculateSimilarity(songOneInfo.energy, songTwoInfo.energy)}%</p>
-          <div className="chart-bar"></div>
+          <div
+            className="chart-bar"
+            style={{ width: `${energyBarLength(songTwoInfo)}vw` }}
+          ></div>
         </div>
         Danceability
         <div className="chart-row">
-          <div className="chart-bar"></div>
+          <div
+            className="chart-bar"
+            style={{ width: `${danceabilityBarLength(songOneInfo)}vw` }}
+          ></div>
           <p>
             {calculateSimilarity(
               songOneInfo.danceability,
@@ -79,17 +108,29 @@ export const CompareSongs = () => {
             )}
             %
           </p>
-          <div className="chart-bar"></div>
+          <div
+            className="chart-bar"
+            style={{ width: `${danceabilityBarLength(songTwoInfo)}vw` }}
+          ></div>
         </div>
         Tempo
         <div className="chart-row">
-          <div className="chart-bar"></div>
+          <div
+            className="chart-bar"
+            style={{ width: `${tempoBarLength(songOneInfo)}vw` }}
+          ></div>
           <p>{calculateSimilarity(songOneInfo.tempo, songTwoInfo.tempo)}%</p>
-          <div className="chart-bar"></div>
+          <div
+            className="chart-bar"
+            style={{ width: `${tempoBarLength(songTwoInfo)}vw` }}
+          ></div>
         </div>
         Key
         <div className="chart-row">
-          <div className="chart-bar"></div>
+          <div
+            className="chart-bar"
+            style={{ width: `${keyBarLength(songOneInfo)}vw` }}
+          ></div>
           <p>
             {Math.round(
               calculateKeySimilarity(
@@ -101,15 +142,24 @@ export const CompareSongs = () => {
             )}
             %
           </p>
-          <div className="chart-bar"></div>
+          <div
+            className="chart-bar"
+            style={{ width: `${keyBarLength(songTwoInfo)}vw` }}
+          ></div>
         </div>
         Mood
         <div className="chart-row">
-          <div className="chart-bar"></div>
+          <div
+            className="chart-bar"
+            style={{ width: `${moodBarLength(songOneInfo)}vw` }}
+          ></div>
           <p>
             {calculateSimilarity(songOneInfo.valence, songTwoInfo.valence)}%
           </p>
-          <div className="chart-bar"></div>
+          <div
+            className="chart-bar"
+            style={{ width: `${moodBarLength(songTwoInfo)}vw` }}
+          ></div>
         </div>
       </div>
       <div className="song-container">
@@ -133,59 +183,6 @@ export const CompareSongs = () => {
           </p>
         </div>
       </div>
-
-      {/* <table>
-        <tr>
-          <th></th>
-          <th>Song 1</th>
-          <th>Similarity</th>
-          <th>Song 2</th>
-        </tr>
-        <tr>
-          <td>Energy</td>
-          <td>{songOneInfo.energy}</td>
-          <td>
-            {calculateSimilarity(songOneInfo.energy, songTwoInfo.energy)}%
-          </td>
-          <td>{songTwoInfo.energy}</td>
-        </tr>
-        <tr>
-          <td>Danceability</td>
-          <td>{songOneInfo.danceability}</td>
-          <td>
-            {calculateSimilarity(
-              songOneInfo.danceability,
-              songTwoInfo.danceability
-            )}
-            %
-          </td>
-          <td>{songTwoInfo.danceability}</td>
-        </tr>
-        <tr>
-          <td>Tempo</td>
-          <td>{songOneInfo.tempo}</td>
-          <td>{calculateSimilarity(songOneInfo.tempo, songTwoInfo.tempo)}%</td>
-          <td>{songTwoInfo.tempo}</td>
-        </tr>
-        <tr>
-          <td>Key</td>
-          <td>{formatKey(songOneInfo.key, songOneInfo.mode)}</td>
-          <td>{calculateKeySimilarity(
-            songOneInfo.key,
-            songTwoInfo.key,
-            songOneInfo.mode,
-            songTwoInfo.mode)}%</td>
-          <td>{formatKey(songTwoInfo.key, songTwoInfo.mode)}</td>
-        </tr>
-        <tr>
-          <td>Mood</td>
-          <td>{songOneInfo.valence}</td>
-          <td>
-            {calculateSimilarity(songOneInfo.valence, songTwoInfo.valence)}%
-          </td>
-          <td>{songTwoInfo.valence}</td>
-        </tr>
-      </table> */}
     </div>
   );
 };
