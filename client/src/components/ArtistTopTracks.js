@@ -43,9 +43,11 @@ export const ArtistTopTracks = () => {
                 Song: <h2>{e.name}</h2>
               </div>
               </a>
-              <div className='song-div'>
-                Album: <h2>{e.album}</h2>
-              </div>
+              <a href={['/album', e.album, e.albumId, e.albumUrl.split('/')[4]].join('/')} key={uuidv4()}>
+                <div className='song-div'>
+                  Album: <h2>{e.album}</h2>
+                </div>
+              </a>
             </div>
           </div>
         ))}
