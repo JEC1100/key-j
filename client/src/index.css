@@ -178,6 +178,7 @@ input {
   border-radius: 10px;
   position: relative;
   margin-bottom: 1rem;
+  color: black;
   background-color: rgb(229, 231, 233);
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
