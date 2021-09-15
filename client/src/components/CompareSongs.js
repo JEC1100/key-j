@@ -4,10 +4,8 @@ const formatEnergy = require('../helperFunctions/formatting/energy');
 const formatDanceability = require('../helperFunctions/formatting/danceability');
 const formatKey = require('../helperFunctions/formatting/key');
 const formatMood = require('../helperFunctions/formatting/mood');
-
-// const calculateSimilarity = require('../helperFunctions/calculate_similarity');
-// const calculateKeySimilarity = require('../helperFunctions/calculate_key_similarity');
-// const formatKey = require('../helperFunctions/formatting/key');
+const calculateSimilarity = require('../helperFunctions/calculate_similarity');
+const calculateKeySimilarity = require('../helperFunctions/calculate_key_similarity');
 
 export const CompareSongs = () => {
   let params = useParams();
@@ -68,31 +66,49 @@ export const CompareSongs = () => {
         Energy
         <div className="chart-row">
           <div className="chart-bar"></div>
-          <p>90%</p>
+          <p>{calculateSimilarity(songOneInfo.energy, songTwoInfo.energy)}%</p>
           <div className="chart-bar"></div>
         </div>
         Danceability
         <div className="chart-row">
           <div className="chart-bar"></div>
-          <p>90%</p>
+          <p>
+            {calculateSimilarity(
+              songOneInfo.danceability,
+              songTwoInfo.danceability
+            )}
+            %
+          </p>
           <div className="chart-bar"></div>
         </div>
         Tempo
         <div className="chart-row">
           <div className="chart-bar"></div>
-          <p>90%</p>
+          <p>{calculateSimilarity(songOneInfo.tempo, songTwoInfo.tempo)}%</p>
           <div className="chart-bar"></div>
         </div>
         Key
         <div className="chart-row">
           <div className="chart-bar"></div>
-          <p>90%</p>
+          <p>
+            {Math.round(
+              calculateKeySimilarity(
+                songOneInfo.key,
+                songTwoInfo.key,
+                songOneInfo.mode,
+                songTwoInfo.mode
+              )
+            )}
+            %
+          </p>
           <div className="chart-bar"></div>
         </div>
         Mood
         <div className="chart-row">
           <div className="chart-bar"></div>
-          <p>90%</p>
+          <p>
+            {calculateSimilarity(songOneInfo.valence, songTwoInfo.valence)}%
+          </p>
           <div className="chart-bar"></div>
         </div>
       </div>
