@@ -43,14 +43,29 @@ const SongInfo = (props) => {
   if(props.redirect) {
   return (
     <div>
+      <div className='breaker'></div>
       {error && <div>{error}</div>}
       {initialState.length > 0 &&
         initialState.map((e) => (
-          <li key={uuidv4()}>
-            <a href={'/' + e.id} key="audio-features">
-              {e.name} by {e.artist}
-            </a>
-          </li>
+          <div className='song-container' key={uuidv4()}>
+            <div className='song-image'>
+              <img src={e.albumUrl} style={{ height: 240 }}/>
+            </div>
+            <div className='song-section'>
+            <a href={'/track/' + e.id + '/' + e.albumUrl.split('/')[4]} key={uuidv4()}>
+              <div className='song-div'>
+                Song: <h2>{e.name}</h2>
+              </div>
+              </a>
+              
+              <a href={'/artist/' + e.artistId + '/' + e.artist} key={uuidv4()}>
+                <div className='song-div'>
+
+                  Artist: <h2>{e.artist}</h2>
+                </div>
+              </a>
+            </div>
+          </div>
         ))}
     </div>
   );
@@ -61,11 +76,25 @@ const SongInfo = (props) => {
     {error && <div>{error}</div>}
     {initialState.length > 0 &&
       initialState.map((e) => (
-        <li key={uuidv4()}>
-          <a href={'/' + props.songAId + '/' + e.id} key="audio-features">
-            {e.name} by {e.artist}
+        <div className='song-container' key={uuidv4()}>
+        <div className='song-image'>
+          <img src={e.albumUrl} style={{ height: 240 }}/>
+        </div>
+        <div className='song-section'>
+          <a href={'/compare/' + props.songAId + '/' + e.id} key={uuidv4()}>
+          <div className='song-div'>
+            Song: <h2>{e.name}</h2>
+          </div>
           </a>
-        </li>
+          
+          <a href={'/compare/' + props.songAId + '/' + e.id} key={uuidv4()}>
+            <div className='song-div'>
+
+              Artist: <h2>{e.artist}</h2>
+            </div>
+          </a>
+        </div>
+      </div>
       ))}</div>
     )
   }

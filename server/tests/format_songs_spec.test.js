@@ -2,7 +2,10 @@ const formatSongs = require('../src/formatting/format_songs');
 
 let tracks = [{
   name: 'Single Ladies',
-  album: 'Queen B',
+  album: {
+    name: 'Queen B',
+    images: [{url: 'url'}],
+  },
   year: 2012,
   id: 1,
   artists: [{
@@ -14,7 +17,14 @@ let tracks = [{
 describe('formatting songs', () => {
   it('returns the song name', () => {
     expect(formatSongs(tracks)).toEqual(
-      [ { name: 'Single Ladies', artist: 'Beyonce', id: 1 } ]
+      [ {album: 'Queen B',
+        albumUrl: 'url',
+        artist: 'Beyonce',
+        artistId: 300,
+        id: 1,
+        name: 'Single Ladies',
+        uri: undefined,
+      } ]
     );
   });
 });
