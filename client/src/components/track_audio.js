@@ -5,6 +5,14 @@ import Searchbar from './Searchbar';
 import SongInfo from './SongInfo';
 import SongsLikeThis from './SongsLikeThis';
 
+
+const formatEnergy = require('../helperFunctions/formatting/energy');
+const formatDanceability = require('../helperFunctions/formatting/danceability');
+const formatKey = require('../helperFunctions/formatting/key');
+const formatMood = require('../helperFunctions/formatting/mood');
+
+
+
 export const TrackAudioFeatures = () => {
   const [state, setState] = useState([]);
   const [submitted, setSubmitted] = useState(false);
@@ -51,11 +59,11 @@ export const TrackAudioFeatures = () => {
     </div>
       <div className='song-section'>
       <h2>Song Statistics</h2>
-        <p> ENERGY: {state.energy} <br></br>
-        DANCEABILITY: {state.danceability} <br></br>
+        <p> ENERGY: {formatEnergy(state.energy)} <br></br>
+        DANCEABILITY: {formatDanceability(state.danceability)} <br></br>
         TEMPO: {state.tempo} BPM <br></br>
-        KEY: {state.key} {state.mode}<br></br>
-        MOOD {state.mood} 
+        KEY: {formatKey(state.key)} {state.mode === 1 ? 'Major' : 'Minor'}<br></br>
+        MOOD{formatMood(state.valence)} 
         </p>
       </div>
       <Searchbar
