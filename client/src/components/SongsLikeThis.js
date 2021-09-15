@@ -50,7 +50,8 @@ export const SongsLikeThis = (props) => {
           <div className='song-section'>
             <a href= {['/compare', songid, params.albumUrl, params.trackName, e.id, e.album.images[0].url.split('/')[4], e.name].join('/')} key={uuidv4()}>
           <div className='song-div'>
-            Song: <h2>{e.name}</h2>
+            <h2>{e.name}</h2>
+            <p>{e.artists[0].name}</p>
           </div>
           </a>
         </div>
