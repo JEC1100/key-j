@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+const formatEnergy = require('../helperFunctions/formatting/energy');
+const formatDanceability = require('../helperFunctions/formatting/danceability');
+const formatKey = require('../helperFunctions/formatting/key');
+const formatMood = require('../helperFunctions/formatting/mood');
 
 // const calculateSimilarity = require('../helperFunctions/calculate_similarity');
 // const calculateKeySimilarity = require('../helperFunctions/calculate_key_similarity');
@@ -37,70 +41,82 @@ export const CompareSongs = () => {
   }, []);
 
   return (
-    <div className='song-compare-container'>
-      <div className='song-container'>
-        <div className='song-image'>
-        <img src={"https://i.scdn.co/image/" + params.songAalbumUrl} style={{ height: 200 }}/>
+    <div className="song-compare-container">
+      <div className="song-container">
+        <div className="song-image">
+          <img
+            src={'https://i.scdn.co/image/' + params.songAalbumUrl}
+            style={{ height: 200 }}
+          />
         </div>
-      <div className='song-info'>
-      <h2>{params.songAName}</h2>
-      <h4>Song Statistics:</h4>
-        <p> ENERGY: {} <br></br>
-        DANCEABILITY: {} <br></br>
-        TEMPO: {} BPM <br></br>
-        KEY: {} {}<br></br>
-        MOOD {} 
-        </p>
+        <div className="song-info">
+          <h2>{params.songAName}</h2>
+          <h4>Song Statistics:</h4>
+          <p>
+            ENERGY: {formatEnergy(songOneInfo.energy)} <br></br>
+            DANCEABILITY: {formatDanceability(songOneInfo.danceability)}
+            <br></br>
+            TEMPO: {songOneInfo.tempo} BPM <br></br>
+            KEY: {formatKey(songOneInfo.key)}
+            <br></br>
+            MOOD {formatMood(songOneInfo.valence)}
+          </p>
+        </div>
       </div>
-    </div>
-      <div className='song-compare-div'>
+      <div className="song-compare-div">
         <h2>Comparison</h2>
-          Energy
-        <div className='chart-row'>
-          <div className='chart-bar'></div>
+        Energy
+        <div className="chart-row">
+          <div className="chart-bar"></div>
           <p>90%</p>
-          <div className='chart-bar'></div>
+          <div className="chart-bar"></div>
         </div>
-          Danceability
-        <div className='chart-row'>
-          <div className='chart-bar'></div>
+        Danceability
+        <div className="chart-row">
+          <div className="chart-bar"></div>
           <p>90%</p>
-          <div className='chart-bar'></div>
+          <div className="chart-bar"></div>
         </div>
-          Tempo
-        <div className='chart-row'>
-          <div className='chart-bar'></div>
+        Tempo
+        <div className="chart-row">
+          <div className="chart-bar"></div>
           <p>90%</p>
-          <div className='chart-bar'></div>
+          <div className="chart-bar"></div>
         </div>
-          Key
-        <div className='chart-row'>
-          <div className='chart-bar'></div>
+        Key
+        <div className="chart-row">
+          <div className="chart-bar"></div>
           <p>90%</p>
-          <div className='chart-bar'></div>
+          <div className="chart-bar"></div>
         </div>
         Mood
-        <div className='chart-row'>
-          <div className='chart-bar'></div>
+        <div className="chart-row">
+          <div className="chart-bar"></div>
           <p>90%</p>
-          <div className='chart-bar'></div>
+          <div className="chart-bar"></div>
         </div>
       </div>
-      <div className='song-container'>
-    <div className='song-image'>
-      <img src={"https://i.scdn.co/image/" + params.songBalbumUrl} style={{ height: 180 }}/>
-    </div>
-      <div className='song-info'>
-        <h2>{params.songBName}</h2>
-        <h4>Song Statistics</h4>
-        <p> ENERGY: {} <br></br>
-        DANCEABILITY: {} <br></br>
-        TEMPO: {} BPM <br></br>
-        KEY: {} {}<br></br>
-        MOOD {} 
-        </p>
+      <div className="song-container">
+        <div className="song-image">
+          <img
+            src={'https://i.scdn.co/image/' + params.songBalbumUrl}
+            style={{ height: 180 }}
+          />
+        </div>
+        <div className="song-info">
+          <h2>{params.songBName}</h2>
+          <h4>Song Statistics</h4>
+          <p>
+            ENERGY: {formatEnergy(songTwoInfo.energy)} <br></br>
+            DANCEABILITY: {formatDanceability(songTwoInfo.danceability)}
+            <br></br>
+            TEMPO: {songTwoInfo.tempo} BPM <br></br>
+            KEY: {formatKey(songTwoInfo.key)}
+            <br></br>
+            MOOD {formatMood(songTwoInfo.valence)}
+          </p>
+        </div>
       </div>
-    </div>
 
       {/* <table>
         <tr>
