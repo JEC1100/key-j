@@ -40,13 +40,11 @@ const App = () => {
           </div>
           <BrowserRouter>
             <Switch>
-             <Route
-              component={() => (
-                <Searchbar
-                  submit={submitSongName}
-                  placeholder={searchbarMessage}
-                  redirect={true}
-                />
+            <Route
+                component={() => <Searchbar submit={submitSongName} placeholder={searchbarMessage} redirect={true} />}
+                path="/"
+                exact
+              />
               <Route
                 component={() => <SongInfo songTitle={songTitle} redirect={true} />}
                 path={"/tracks/:songTitle"}
@@ -57,6 +55,7 @@ const App = () => {
               <Route component={ArtistTopTracks} path="/artist/:artistId/:artistName" exact />
             </Switch>
           </BrowserRouter>
+        </div>
       </div>
     </div>
   );

@@ -52,13 +52,14 @@ export const TrackAudioFeatures = () => {
       })
       .then((response) => setState(response.audioFeatures));
   }, []);
-  return(<div>
+  return(
+  <div>
     <div className='song-container'>
-    <div className='song-image'>
-    <img src={"https://i.scdn.co/image/" + params.albumUrl} style={{ height: 240 }}/>
-    </div>
+      <div className='song-image'>
+        <img src={"https://i.scdn.co/image/" + params.albumUrl} style={{ height: 240 }}/>
+      </div>
       <div className='song-section'>
-      <h2>Song Statistics</h2>
+        <h2>Song Statistics</h2>
         <p> ENERGY: {formatEnergy(state.energy)} <br></br>
         DANCEABILITY: {formatDanceability(state.danceability)} <br></br>
         TEMPO: {state.tempo} BPM <br></br>
@@ -79,5 +80,6 @@ export const TrackAudioFeatures = () => {
         <SongInfo songTitle={songTitle} redirect={false} songAId={params.id} />
       ) : null}
     </div>
+  </div>
   );
 };
