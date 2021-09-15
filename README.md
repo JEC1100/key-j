@@ -16,8 +16,6 @@ npm start
 
 This project works in two parts: the front end is stored in the client folder, and the back end is stored in server folder. Once the project has been forked/cloned, each will need to be set up individually.
 
-### Server set-up
-
 The back end runs on Node.js and first needs dependencies to be installed. First cd into server folder and then run:
 
 ```
@@ -29,6 +27,20 @@ Then cd into client folder and repeat this step by, again, running:
 ```
 npm install
 ```
+
+### Using the Spotify API
+
+1. Visit [Spotify For Developers](https://developer.spotify.com/).
+2. Go to the dashboard and click 'log in'.
+3. Create an app. 
+4. Make a note of the CLIENT ID and CLIENT SECRET
+5. Go back to your project's folder on your computer and add a .env file in your server folder.
+6. Add another .env folder in server/src/api
+7. In both of these add the following:
+```
+CLIENT_ID = <em>YOUR CLIENT ID</em>
+CLIENT_SECRET = <em>YOUR CLIENT SECRET</em>
+PORT = 3001
 
 ### Server tests
 
@@ -52,7 +64,7 @@ Linting is handled by ESLint and run automatically with the tests. If you want t
 npm run pretest
 ```
 
-## User Stories
+## User stories
 
 ```
 As a user,
@@ -134,6 +146,6 @@ So I can check compatibility with setlists,
 I can save setlists/playlists and compare songs.
 ```
 
-## Sequence Diagram
+## Response-request diagram
 
 ![sequence_diagram](/images/sequence_diagram.key_j.png)
