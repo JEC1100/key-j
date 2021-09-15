@@ -44,23 +44,19 @@ export const TrackAudioFeatures = () => {
       })
       .then((response) => setState(response.audioFeatures));
   }, []);
-
-  return (
-    <div>
-      <div className="song-container">
-        <div className="song-image"></div>
-        <div className="song-section">
-          <h2>Song Statistics</h2>
-          <p>
-            {' '}
-            ENERGY: {state.energy} <br></br>
-            DANCEABILITY: {state.danceability} <br></br>
-            TEMPO: {state.tempo} BPM <br></br>
-            KEY: {state.key} {state.mode}
-            <br></br>
-            MOOD {state.mood}
-          </p>
-        </div>
+  return(<div>
+    <div className='song-container'>
+    <div className='song-image'>
+    <img src={"https://i.scdn.co/image/" + params.albumUrl} style={{ height: 240 }}/>
+    </div>
+      <div className='song-section'>
+      <h2>Song Statistics</h2>
+        <p> ENERGY: {state.energy} <br></br>
+        DANCEABILITY: {state.danceability} <br></br>
+        TEMPO: {state.tempo} BPM <br></br>
+        KEY: {state.key} {state.mode}<br></br>
+        MOOD {state.mood} 
+        </p>
       </div>
       <Searchbar
         submit={submitSongName}

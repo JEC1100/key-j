@@ -10,4 +10,6 @@ router.post('/track_audio', root.trackAudio);
 
 router.post('/songs_like_this', root.songsLikeThis);
 
+router.post('/artist_top_tracks', root.artistTopTracks);
+
 module.exports = router;
