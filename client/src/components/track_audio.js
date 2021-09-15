@@ -64,7 +64,7 @@ export const TrackAudioFeatures = () => {
         DANCEABILITY: {formatDanceability(state.danceability)} <br></br>
         TEMPO: {state.tempo} BPM <br></br>
         KEY: {formatKey(state.key, state.mode)}<br></br>
-        MOOD: <span role="img" aria-label="sheep">{formatMood(state.valence)}</span>
+        MOOD: <span role="img" aria-label="mood-emoji">{formatMood(state.valence)}</span>
         </p>
       </div>
       <Searchbar
