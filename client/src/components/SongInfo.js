@@ -81,9 +81,7 @@ const SongInfo = (props) => {
           <img src={e.albumUrl} style={{ height: 240 }}/>
         </div>
         <div className='song-section'>
-          <a href={'/compare/' + 
-          props.songAId + '/' + params.albumUrl + '/' + params.trackName + 
-          '/' + e.id + '/' + e.albumUrl.split('/')[4] + '/' + e.name} key={uuidv4()}>
+          <a href={['/compare', props.songAId, params.albumUrl, params.trackName, e.id, e.albumUrl.split('/')[4], e.name].join('/')} key={uuidv4()}>
           <div className='song-div'>
             Song: <h2>{e.name}</h2>
           </div>
