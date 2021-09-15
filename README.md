@@ -41,6 +41,7 @@ npm install
 CLIENT_ID = <em>YOUR CLIENT ID</em>
 CLIENT_SECRET = <em>YOUR CLIENT SECRET</em>
 PORT = 3001
+```
 
 ### Server tests
 
