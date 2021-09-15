@@ -13,19 +13,40 @@ const App = () => {
     setSongTitle(songname);
   };
 
+  const searchbarMessage = 'Enter a song to find its key characteristics';
+
+  const goBack = () => {
+    window.history.back();
+  };
+
   return (
     <div className="background">
       <div className="app">
-        <a href='/'>
-          <h1>| KEY-J |</h1>
-        </a>
+        <div className="nav">
+          <div className="logo">
+            <a href="/">
+              <h1>| KEY-J |</h1>
+            </a>
+          </div>
+          <div className="home">
+            <a href="/">
+              <h1>Home</h1>
+            </a>
+          </div>
+          <div className="back">
+            <button onClick={() => goBack()}>
+              <h1>Back</h1>
+            </button>
+          </div>
           <BrowserRouter>
             <Switch>
-            <Route
-                component={() => <Searchbar submit={submitSongName} redirect={true} />}
-                path="/"
-                exact
-              />
+             <Route
+              component={() => (
+                <Searchbar
+                  submit={submitSongName}
+                  placeholder={searchbarMessage}
+                  redirect={true}
+                />
               <Route
                 component={() => <SongInfo songTitle={songTitle} redirect={true} />}
                 path={"/tracks/:songTitle"}
@@ -36,9 +57,8 @@ const App = () => {
               <Route component={ArtistTopTracks} path="/artist/:artistId/:artistName" exact />
             </Switch>
           </BrowserRouter>
-          <section className='blue'></section>
-        </div>
       </div>
+    </div>
   );
 };
 

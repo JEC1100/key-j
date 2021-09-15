@@ -30,6 +30,40 @@ code {
   box-shadow: inset 0 0 1.5rem black;
 }
 
+.nav a {
+  text-decoration: none;
+}
+
+.nav button {
+  border: none;
+  padding: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button h1 {
+  margin: 0;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 70px;
+}
+
+.home {
+  position: fixed;
+  top: 20px;
+  right: 300px;
+}
+
+/* Not sure why at the moment, but back button wasn't in correct position so I hard-coded it further down */
+.back {
+  position: fixed;
+  top: 50px;
+  right: 70px;
+}
+
 .breaker {
   min-height: 250px;
 }
@@ -41,9 +75,6 @@ h1 {
   font-family: 'Hind', sans-serif;
   outline: white;
   font-size: 3rem;
-  position: fixed;
-  top: 20px;
-  left: 70px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -55,6 +86,7 @@ h1 {
 form {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  max-height: 60px;
 }
 
 .search-bar {
@@ -163,7 +195,6 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 
 .song-div:hover {
   position: relative;
-  top:2px;
 }
 
 .song-compare-container {
@@ -199,8 +230,6 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   height: 6px;
   background: #051937;
 }
-  top: 2px;
-}
 
 .similar-songs-button {
   min-height: 100%;
@@ -213,9 +242,30 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   font-size: 1.8rem;
   font-family: 'Glory', sans-serif;
   margin-top: 10px;
+  margin-bottom: 20px;
   border-radius: 6px;
   text-align: left;
   padding-left: 15px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.similar-songs-list {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-top: 100px;
+  width: 80vw;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.similar-song a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.similar-song {
+  padding-top: 10px;
 }
