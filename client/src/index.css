@@ -167,7 +167,7 @@ input {
 
 .song-section,
 .song-section a {
-  color: #051937;
+  color: rgb(221, 221, 221);
   text-decoration: none;
   font-size: 1.2rem;
 }
