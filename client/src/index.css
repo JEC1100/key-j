@@ -23,7 +23,7 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  box-shadow: inset 0 0 1.5rem black;
+  box-shadow: inset 0 0 0.5rem black;
 }
 
 main {
