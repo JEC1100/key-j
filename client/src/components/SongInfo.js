@@ -87,8 +87,7 @@ const SongInfo = (props) => {
           </div>
           </a>
           
-          {/* link should take user to the artist page */}
-          <a href={'/compare/' + props.songAId + '/' + params.albumUrl + '/' + e.id + '/' + e.albumUrl.split('/')[4]} key={uuidv4()}>
+          <a href={'/artist/' + e.artistId + '/' + e.artist} key={uuidv4()}>
             <div className='song-div'>
 
               Artist: <h2>{e.artist}</h2>
