@@ -12,7 +12,6 @@ const formatKey = require('../helperFunctions/formatting/key');
 const formatMood = require('../helperFunctions/formatting/mood');
 
 
-
 export const TrackAudioFeatures = () => {
   const [state, setState] = useState([]);
   const [submitted, setSubmitted] = useState(false);
@@ -28,7 +27,7 @@ export const TrackAudioFeatures = () => {
 
   const seeSimilarSongs = () => {
     setCompareSongs(true);
-    
+    setSubmitted(false);
   };
 
   const searchbarMessage = 'Enter another song to compare track info';
@@ -69,6 +68,7 @@ export const TrackAudioFeatures = () => {
         MOOD: <span role="img" aria-label="mood-emoji">{formatMood(state.valence)}</span>
         </p>
       </div>
+    </div>
       <Searchbar
         submit={submitSongName}
         redirect={false}
@@ -77,11 +77,12 @@ export const TrackAudioFeatures = () => {
       <button className="similar-songs-button" onClick={seeSimilarSongs}>
         See Similar Songs
       </button>
+      <div className='breaker'></div>
       {compareSongs ? <SongsLikeThis song={[state]} /> : null}
       {submitted ? (
         <SongInfo songTitle={songTitle} redirect={false} songAId={params.id}/>
       ) : null}
     </div>
-  </div>
+
   );
 };
