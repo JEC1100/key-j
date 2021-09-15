@@ -59,7 +59,8 @@ export const TrackAudioFeatures = () => {
         <img src={"https://i.scdn.co/image/" + params.albumUrl} style={{ height: 240 }}/>
       </div>
       <div className='song-section'>
-        <h2>Song Statistics</h2>
+        <h2>{params.trackName}</h2>
+        <h3> Song Statistics: </h3>
         <p> ENERGY: {formatEnergy(state.energy)} <br></br>
         DANCEABILITY: {formatDanceability(state.danceability)} <br></br>
         TEMPO: {state.tempo} BPM <br></br>
