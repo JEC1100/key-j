@@ -46,6 +46,11 @@ export const SongsLikeThis = (props) => {
           Song: <h2>{e.name}</h2>
         </div>
         </a>
+        <a href={['/album', e.album.name, e.album.id, e.album.images[0].url.split('/')[4]].join('/')} key={uuidv4()}>
+          <div className='song-div'>
+            Album: <h2>{e.album.name}</h2>
+          </div>
+        </a>
         <a href={'/artist/' + e.artists[0].id + '/' + e.artists[0].name} key={uuidv4()}>
           <div className='song-div'>
             Artist: <h2>{e.artists[0].name}</h2>

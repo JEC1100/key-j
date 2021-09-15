@@ -8,7 +8,8 @@ const formatSongs = (songs) => {
       id: song.id,
       uri: song.uri,
       albumUrl: song.album.images[0].url,
-      album: song.album.name});
+      album: song.album.name,
+      albumId: song.album.id});
   });
   return arr;
 };

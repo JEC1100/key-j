@@ -5,6 +5,7 @@ import Searchbar from './Searchbar';
 import { TrackAudioFeatures } from './track_audio';
 import { CompareSongs} from './CompareSongs';
 import { ArtistTopTracks } from './ArtistTopTracks';
+import { AlbumTracks } from './AlbumTracks';
 
 const App = () => {
   const [songTitle, setSongTitle] = useState('');
@@ -52,9 +53,10 @@ const App = () => {
               />
               <Route component={TrackAudioFeatures} path="/track/:id/:albumUrl/:trackName" exact />
               <Route 
-              component={CompareSongs} 
-              path="/compare/:songAid/:songAalbumUrl/:songAName/:songBid/:songBalbumUrl/:songBName" exact />
+                component={CompareSongs} 
+                path="/compare/:songAid/:songAalbumUrl/:songAName/:songBid/:songBalbumUrl/:songBName" exact />
               <Route component={ArtistTopTracks} path="/artist/:artistId/:artistName" exact />
+              <Route component={AlbumTracks} path="/album/:albumName/:albumId/:albumUrl" exact />
             </Switch>
           </BrowserRouter>
         </div>

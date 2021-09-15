@@ -4,6 +4,7 @@ const songsLikeThis = require('../src/api/get_songs_like_this');
 // eslint-disable-next-line max-len
 const getMultipleAudioFeatures = require('../src/api/get_multiple_audio_features');
 const artistTopTracks = require('../src/api/get_artists_top_tracks');
+const albumTracks = require('../src/api/get_album_tracks');
 
 exports.root = (req, res) => {
   getTracks(req.body.songName).then((data) => {
@@ -42,6 +43,14 @@ exports.artistTopTracks = (req, res) => {
   artistTopTracks(req.body.artistId).then((data) => {
     res.json({
       artist_tracks: data,
+    });
+  });
+};
+
+exports.albumTracks = (req, res) => {
+  albumTracks(req.body.albumId).then((data) => {
+    res.json({
+      album_tracks: data,
     });
   });
 };
