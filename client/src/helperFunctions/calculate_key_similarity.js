@@ -1,17 +1,12 @@
-const calculateKeySimilarity = (keyA, keyB) => {
-  const convertOdds = {
-    1: 7,
-    3: 9,
-    5: 11,
-    7: 1,
-    9: 3,
-    11: 5,
-  };
-  if(keyA % 2) { keyA = convertOdds[keyA]}
-  if(keyB % 2) { keyB = convertOdds[keyB]}
-  const interval = Math.abs(keyA - keyB);
-  const percent = Math.abs((interval > 6 ? 6 - interval : interval - 6));
+const calculateKeySimilarity = (keyA, keyB, modeA, modeB) => {
+  const interval = Math.abs(convertToFifths(keyA, modeA) - convertToFifths(keyB, modeB));
+  const percent = (interval > 6 ? interval - 6 : 6 - interval);
   return (Math.round(percent / 6 * 10000) / 100);
+};
+
+const convertToFifths = (key, mode) => {
+  if(key % 2) { key = key < 6 ? key + 6 : key - 6 }
+  return !mode ? key - 3 : key;
 };
 
 module.exports = calculateKeySimilarity;

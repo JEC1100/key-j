@@ -73,9 +73,13 @@ export const CompareSongs = () => {
         </tr>
         <tr>
           <td>Key</td>
-          <td>{formatKey(songOneInfo.key)}</td>
-          <td>{calculateKeySimilarity(songOneInfo.key, songTwoInfo.key)}%</td>
-          <td>{formatKey(songTwoInfo.key)}</td>
+          <td>{formatKey(songOneInfo.key, songOneInfo.mode)}</td>
+          <td>{calculateKeySimilarity(
+            songOneInfo.key,
+            songTwoInfo.key,
+            songOneInfo.mode,
+            songTwoInfo.mode)}%</td>
+          <td>{formatKey(songTwoInfo.key, songTwoInfo.mode)}</td>
         </tr>
         <tr>
           <td>Mood</td>
