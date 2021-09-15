@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-const calculateSimilarity = require('../helperFunctions/calculate_similarity');
-const formatKey = require('../helperFunctions/formatting/key');
+// const calculateSimilarity = require('../helperFunctions/calculate_similarity');
+// const formatKey = require('../helperFunctions/formatting/key');
 
 export const CompareSongs = () => {
   let params = useParams();
@@ -36,8 +36,66 @@ export const CompareSongs = () => {
   }, []);
 
   return (
-    <div>
-      <table>
+    <div className='song-compare-container'>
+      <div className='song-container'>
+    <div className='song-image'></div>
+      <div className='song-info'>
+      <h2>Song Statistics</h2>
+        <p> ENERGY: {} <br></br>
+        DANCEABILITY: {} <br></br>
+        TEMPO: {} BPM <br></br>
+        KEY: {} {}<br></br>
+        MOOD {} 
+        </p>
+      </div>
+    </div>
+      <div className='song-compare-div'>
+        <h2>Comparison</h2>
+          Energy
+        <div className='chart-row'>
+          <div className='chart-bar'></div>
+          <p>90%</p>
+          <div className='chart-bar'></div>
+        </div>
+          Danceability
+        <div className='chart-row'>
+          <div className='chart-bar'></div>
+          <p>90%</p>
+          <div className='chart-bar'></div>
+        </div>
+          Tempo
+        <div className='chart-row'>
+          <div className='chart-bar'></div>
+          <p>90%</p>
+          <div className='chart-bar'></div>
+        </div>
+          Key
+        <div className='chart-row'>
+          <div className='chart-bar'></div>
+          <p>90%</p>
+          <div className='chart-bar'></div>
+        </div>
+        Mood
+        <div className='chart-row'>
+          <div className='chart-bar'></div>
+          <p>90%</p>
+          <div className='chart-bar'></div>
+        </div>
+      </div>
+      <div className='song-container'>
+    <div className='song-image'></div>
+      <div className='song-info'>
+      <h2>Song Statistics</h2>
+        <p> ENERGY: {} <br></br>
+        DANCEABILITY: {} <br></br>
+        TEMPO: {} BPM <br></br>
+        KEY: {} {}<br></br>
+        MOOD {} 
+        </p>
+      </div>
+    </div>
+
+      {/* <table>
         <tr>
           <th></th>
           <th>Song 1</th>
@@ -84,7 +142,7 @@ export const CompareSongs = () => {
           </td>
           <td>{songTwoInfo.valence}</td>
         </tr>
-      </table>
+      </table> */}
     </div>
   );
 };
