@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-// const calculateSimilarity = require('../helperFunctions/calculate_similarity');
-// const formatKey = require('../helperFunctions/formatting/key');
+
+const calculateSimilarity = require('../helperFunctions/calculate_similarity');
+const calculateKeySimilarity = require('../helperFunctions/calculate_key_similarity');
+const formatKey = require('../helperFunctions/formatting/key');
 
 export const CompareSongs = () => {
   let params = useParams();
@@ -130,9 +132,13 @@ export const CompareSongs = () => {
         </tr>
         <tr>
           <td>Key</td>
-          <td>{formatKey(songOneInfo.key)}</td>
-          <td>{calculateSimilarity(songOneInfo.key, songTwoInfo.key)}%</td>
-          <td>{formatKey(songTwoInfo.key)}</td>
+          <td>{formatKey(songOneInfo.key, songOneInfo.mode)}</td>
+          <td>{calculateKeySimilarity(
+            songOneInfo.key,
+            songTwoInfo.key,
+            songOneInfo.mode,
+            songTwoInfo.mode)}%</td>
+          <td>{formatKey(songTwoInfo.key, songTwoInfo.mode)}</td>
         </tr>
         <tr>
           <td>Mood</td>
