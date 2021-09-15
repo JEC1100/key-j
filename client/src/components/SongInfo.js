@@ -75,7 +75,7 @@ const SongInfo = (props) => {
     {error && <div>{error}</div>}
     {initialState.length > 0 &&
       initialState.map((e) => (
-        <div className='song-container' key={uuidv4()}>
+        <div className='home-song-container' key={uuidv4()}>
         <div className='song-image'>
         <a href={['/album', e.album, e.albumId, e.albumUrl.split('/')[4]].join('/')} key={uuidv4()}>
           <img src={e.albumUrl} style={{ height: 180 }}/>

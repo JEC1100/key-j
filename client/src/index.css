@@ -152,6 +152,7 @@ input {
   margin: 1rem;
   height: 12vw;
   padding: 2rem;
+  margin-top: 3rem;
   border-radius: 10px;
   background-color: rgba(0, 77, 122, 0.7);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
