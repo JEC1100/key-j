@@ -34,7 +34,7 @@ export const SongsLikeThis = (props) => {
       {state.length > 0 &&
         state.map((e, i) => (
           <div className="similar-song" key={i}>
-            <a href={'/' + songid + '/' + e.id} key="audio-features">
+            <a href={'/compare/' + songid + '/' + e.id} key="audio-features">
               {e.name} by {e.artists[0].name}
             </a>
           </div>
