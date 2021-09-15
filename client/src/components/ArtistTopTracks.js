@@ -30,8 +30,9 @@ export const ArtistTopTracks = () => {
   return (
     <div>
       <div className='song-container'>
-      <h2>Top 10 songs by {params.artistName}</h2>
+      <h1>Top 10 songs by {params.artistName}</h1>
       </div>
+      <div className='breaker'></div>
       {state.length > 0 &&
         state.map((e) => (
           <div className='song-container' key={uuidv4()}>
@@ -44,11 +45,11 @@ export const ArtistTopTracks = () => {
                 Song: <h2>{e.name}</h2>
               </div>
               </a>
-              <a href={['/album', e.album, e.albumId, e.albumUrl.split('/')[4]].join('/')} key={uuidv4()}>
-                <div className='song-div'>
-                  Album: <h2>{e.album}</h2>
-                </div>
-              </a>
+          <a href={['/album', e.album, e.albumId, e.albumUrl.split('/')[4]].join('/')} key={uuidv4()}>
+          <div className='song-div'>
+            Album: <h2>{e.album}</h2>
+          </div>
+          </a>
             </div>
           </div>
         ))}

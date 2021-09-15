@@ -2,7 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import React, { useState } from 'react';
 import SongInfo from './SongInfo';
 import Searchbar from './Searchbar';
-import { TrackAudioFeatures } from './track_audio';
+import { TrackAudioFeatures } from './TrackAudio';
 import { CompareSongs} from './CompareSongs';
 import { ArtistTopTracks } from './ArtistTopTracks';
 import { AlbumTracks } from './AlbumTracks';

@@ -36,7 +36,7 @@ export const AlbumTracks = () => {
     </h1>
       {state.length > 0 &&
         state.map((e) => (
-          <div className='song-container' key={uuidv4()}>
+          <div className='album-song-container' key={uuidv4()}>
           <div className='song-section'>
             <a href= {'/track/' + e.id + '/' + params.albumUrl + '/' + e.name} key={uuidv4()}>
             <div className='song-div'>
