@@ -7,8 +7,8 @@ let spotifyApi = new SpotifyWebApi({
   clientSecret: process.env.CLIENT_SECRET,
 });
 
-const songsLikeThis= (song) => {
-  audio = song[0]
+const songsLikeThis = (song) => {
+  const audio = song[0];
   const response = new Promise((res, rej) => {
     spotifyApi.clientCredentialsGrant().then(
       function(data) {
@@ -22,12 +22,12 @@ const songsLikeThis= (song) => {
           target_tempo: audio.tempo,
           target_speechiness: audio.speechiness,
           target_instrumentalness: audio.instrumentalness,
-          seed_tracks: [audio.id]
-        })
+          seed_tracks: [audio.id],
+        });
       })
       .then(function(data) {
         let recommendations = data.body;
-        res(recommendations)
+        res(recommendations);
       },
       function(err) {
         rej('Something went wrong!', err);

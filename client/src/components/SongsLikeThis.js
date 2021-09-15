@@ -33,7 +33,7 @@ export const SongsLikeThis = (props) => {
     {state.length > 0 &&
       state.map((e, i) => (
         <li key={i}>
-          <a href={'/' + songid + '/' + e.id} key="audio-features">
+          <a href={'/compare/' + songid + '/' + e.id} key="audio-features">
             {e.name} by {e.artist}
           </a>
         </li>

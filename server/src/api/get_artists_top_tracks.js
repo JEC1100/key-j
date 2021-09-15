@@ -1,22 +1,23 @@
 require('dotenv').config();
 
 let SpotifyWebApi = require('spotify-web-api-node');
+let formatSongs = require('../formatting/format_songs');
 
 let spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
 });
 
-const audioFeatures = (songId) => {
+const artistTopTracks = (artistId) => {
   const response = new Promise((res, rej) => {
     spotifyApi.clientCredentialsGrant().then(
       function(data) {
         spotifyApi.setAccessToken(data.body['access_token']);
-        return spotifyApi.getAudioFeaturesForTrack(songId);
+        return spotifyApi.getArtistTopTracks(artistId, 'GB');
       })
       .then(function(data) {
-        const audio_features = data.body;
-        res(audio_features);
+        const artist_tracks = data.body.tracks;
+        res(formatSongs(artist_tracks));
       },
       function(err) {
         rej('Something went wrong!', err);
@@ -25,4 +26,4 @@ const audioFeatures = (songId) => {
   return response;
 };
 
-module.exports = audioFeatures;
+module.exports = artistTopTracks;

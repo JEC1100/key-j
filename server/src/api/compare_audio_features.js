@@ -1,7 +1,6 @@
 require('dotenv').config();
 
 let SpotifyWebApi = require('spotify-web-api-node');
-let compareSongs = require('../compare_songs/compare_audio_features');
 
 let spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
