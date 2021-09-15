@@ -15,8 +15,8 @@ const albumTracks = (albumId) => {
         return spotifyApi.getAlbum(albumId);
       })
       .then(function(data) {
-        const album = data.body.tracks.items
-        res(album)
+        const album = data.body.tracks.items;
+        res(album);
       },
       function(err) {
         rej('Something went wrong!', err);

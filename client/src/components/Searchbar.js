@@ -20,10 +20,11 @@ const Searchbar = (props) => {
   };
 
   return (
-    <form className="search-bar" onSubmit={handleSubmit} data-testid="form">
+    <form className="search-bar" onSubmit={handleSubmit} data-testid="form" >
       <input
         className="text-field"
         type="text"
+        data-testid="songname"
         value={songname}
         onChange={handleChange}
         id="songname"
