@@ -88,14 +88,20 @@ export const CompareSongs = () => {
           <div className="chart-bar-box left">
             <div
               className="chart-bar"
-              style={{ width: `${energyBarLength(songOneInfo)}vw` }}
+              style={{
+                width: `${energyBarLength(songOneInfo)}vw`,
+                height: '1vh',
+              }}
             ></div>
           </div>
           <p>{calculateSimilarity(songOneInfo.energy, songTwoInfo.energy)}%</p>
           <div className="chart-bar-box right">
             <div
               className="chart-bar"
-              style={{ width: `${energyBarLength(songTwoInfo)}vw` }}
+              style={{
+                width: `${energyBarLength(songTwoInfo)}vw`,
+                height: '1vh',
+              }}
             ></div>
           </div>
         </div>
@@ -104,7 +110,10 @@ export const CompareSongs = () => {
           <div className="chart-bar-box left">
             <div
               className="chart-bar"
-              style={{ width: `${danceabilityBarLength(songOneInfo)}vw` }}
+              style={{
+                width: `${danceabilityBarLength(songOneInfo)}vw`,
+                height: '1vh',
+              }}
             ></div>
           </div>
           <p>
@@ -117,7 +126,10 @@ export const CompareSongs = () => {
           <div className="chart-bar-box right">
             <div
               className="chart-bar"
-              style={{ width: `${danceabilityBarLength(songTwoInfo)}vw` }}
+              style={{
+                width: `${danceabilityBarLength(songTwoInfo)}vw`,
+                height: '1vh',
+              }}
             ></div>
           </div>
         </div>
@@ -126,14 +138,20 @@ export const CompareSongs = () => {
           <div className="chart-bar-box left">
             <div
               className="chart-bar"
-              style={{ width: `${tempoBarLength(songOneInfo)}vw` }}
+              style={{
+                width: `${tempoBarLength(songOneInfo)}vw`,
+                height: '1vh',
+              }}
             ></div>
           </div>
           <p>{calculateSimilarity(songOneInfo.tempo, songTwoInfo.tempo)}%</p>
           <div className="chart-bar-box right">
             <div
               className="chart-bar"
-              style={{ width: `${tempoBarLength(songTwoInfo)}vw` }}
+              style={{
+                width: `${tempoBarLength(songTwoInfo)}vw`,
+                height: '1vh',
+              }}
             ></div>
           </div>
         </div>
@@ -142,7 +160,7 @@ export const CompareSongs = () => {
           <div className="chart-bar-box left">
             <div
               className="chart-bar"
-              style={{ width: `${keyBarLength(songOneInfo)}vw` }}
+              style={{ width: `${keyBarLength(songOneInfo)}vw`, height: '1vh' }}
             ></div>
           </div>
           <p>
@@ -159,7 +177,7 @@ export const CompareSongs = () => {
           <div className="chart-bar-box right">
             <div
               className="chart-bar"
-              style={{ width: `${keyBarLength(songTwoInfo)}vw` }}
+              style={{ width: `${keyBarLength(songTwoInfo)}vw`, height: '1vh' }}
             ></div>
           </div>
         </div>
@@ -168,7 +186,10 @@ export const CompareSongs = () => {
           <div className="chart-bar-box left">
             <div
               className="chart-bar"
-              style={{ width: `${moodBarLength(songOneInfo)}vw` }}
+              style={{
+                width: `${moodBarLength(songOneInfo)}vw`,
+                height: '1vh',
+              }}
             ></div>
           </div>
           <p>
@@ -177,7 +198,10 @@ export const CompareSongs = () => {
           <div className="chart-bar-box right">
             <div
               className="chart-bar"
-              style={{ width: `${moodBarLength(songTwoInfo)}vw` }}
+              style={{
+                width: `${moodBarLength(songTwoInfo)}vw`,
+                height: '1vh',
+              }}
             ></div>
           </div>
         </div>
