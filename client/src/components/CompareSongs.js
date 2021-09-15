@@ -85,22 +85,28 @@ export const CompareSongs = () => {
         <h2>Comparison</h2>
         Energy
         <div className="chart-row">
-          <div
-            className="chart-bar"
-            style={{ width: `${energyBarLength(songOneInfo)}vw` }}
-          ></div>
+          <div className="chart-bar-box left">
+            <div
+              className="chart-bar"
+              style={{ width: `${energyBarLength(songOneInfo)}vw` }}
+            ></div>
+          </div>
           <p>{calculateSimilarity(songOneInfo.energy, songTwoInfo.energy)}%</p>
-          <div
-            className="chart-bar"
-            style={{ width: `${energyBarLength(songTwoInfo)}vw` }}
-          ></div>
+          <div className="chart-bar-box right">
+            <div
+              className="chart-bar"
+              style={{ width: `${energyBarLength(songTwoInfo)}vw` }}
+            ></div>
+          </div>
         </div>
         Danceability
         <div className="chart-row">
-          <div
-            className="chart-bar"
-            style={{ width: `${danceabilityBarLength(songOneInfo)}vw` }}
-          ></div>
+          <div className="chart-bar-box left">
+            <div
+              className="chart-bar"
+              style={{ width: `${danceabilityBarLength(songOneInfo)}vw` }}
+            ></div>
+          </div>
           <p>
             {calculateSimilarity(
               songOneInfo.danceability,
@@ -108,29 +114,37 @@ export const CompareSongs = () => {
             )}
             %
           </p>
-          <div
-            className="chart-bar"
-            style={{ width: `${danceabilityBarLength(songTwoInfo)}vw` }}
-          ></div>
+          <div className="chart-bar-box right">
+            <div
+              className="chart-bar"
+              style={{ width: `${danceabilityBarLength(songTwoInfo)}vw` }}
+            ></div>
+          </div>
         </div>
         Tempo
         <div className="chart-row">
-          <div
-            className="chart-bar"
-            style={{ width: `${tempoBarLength(songOneInfo)}vw` }}
-          ></div>
+          <div className="chart-bar-box left">
+            <div
+              className="chart-bar"
+              style={{ width: `${tempoBarLength(songOneInfo)}vw` }}
+            ></div>
+          </div>
           <p>{calculateSimilarity(songOneInfo.tempo, songTwoInfo.tempo)}%</p>
-          <div
-            className="chart-bar"
-            style={{ width: `${tempoBarLength(songTwoInfo)}vw` }}
-          ></div>
+          <div className="chart-bar-box right">
+            <div
+              className="chart-bar"
+              style={{ width: `${tempoBarLength(songTwoInfo)}vw` }}
+            ></div>
+          </div>
         </div>
         Key
         <div className="chart-row">
-          <div
-            className="chart-bar"
-            style={{ width: `${keyBarLength(songOneInfo)}vw` }}
-          ></div>
+          <div className="chart-bar-box left">
+            <div
+              className="chart-bar"
+              style={{ width: `${keyBarLength(songOneInfo)}vw` }}
+            ></div>
+          </div>
           <p>
             {Math.round(
               calculateKeySimilarity(
@@ -142,24 +156,30 @@ export const CompareSongs = () => {
             )}
             %
           </p>
-          <div
-            className="chart-bar"
-            style={{ width: `${keyBarLength(songTwoInfo)}vw` }}
-          ></div>
+          <div className="chart-bar-box right">
+            <div
+              className="chart-bar"
+              style={{ width: `${keyBarLength(songTwoInfo)}vw` }}
+            ></div>
+          </div>
         </div>
         Mood
         <div className="chart-row">
-          <div
-            className="chart-bar"
-            style={{ width: `${moodBarLength(songOneInfo)}vw` }}
-          ></div>
+          <div className="chart-bar-box left">
+            <div
+              className="chart-bar"
+              style={{ width: `${moodBarLength(songOneInfo)}vw` }}
+            ></div>
+          </div>
           <p>
             {calculateSimilarity(songOneInfo.valence, songTwoInfo.valence)}%
           </p>
-          <div
-            className="chart-bar"
-            style={{ width: `${moodBarLength(songTwoInfo)}vw` }}
-          ></div>
+          <div className="chart-bar-box right">
+            <div
+              className="chart-bar"
+              style={{ width: `${moodBarLength(songTwoInfo)}vw` }}
+            ></div>
+          </div>
         </div>
       </div>
       <div className="song-container">

@@ -208,6 +208,21 @@ input {
   position: relative;
 }
 
+.chart-bar-box {
+  display: flex;
+  width: 10vw;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.right {
+  align-items: left;
+  justify-content: flex-start;
+}
+
 .chart-bar {
   margin: 5px;
   width: 10vw;
