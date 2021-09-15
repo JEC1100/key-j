@@ -1,13 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Glory', sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Glory', sans-serif;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; */
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  box-shadow: inset 0 0 1.5rem black;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav button {
+  border: none;
+  padding: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button h1 {
+  margin: 0;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 70px;
+}
+
+.home {
+  position: fixed;
+  top: 20px;
+  right: 300px;
+}
+
+/* Not sure why at the moment, but back button wasn't in correct position so I hard-coded it further down */
+.back {
+  position: fixed;
+  top: 50px;
+  right: 70px;
+}
+
+.breaker {
+  min-height: 250px;
+}
+
+h1 {
+  background-color: #004d7a;
+  color: aliceblue;
+  letter-spacing: 10px;
+  font-family: 'Hind', sans-serif;
+  outline: white;
+  font-size: 3rem;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* --------  SEARCH BAR STYLING  -------- */
+
+form {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  max-height: 60px;
+}
+
+.search-bar {
+  border-radius: 6px;
+  overflow: hidden;
+  background: white;
+  min-width: 45vw;
+  margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: none;
+  -webkit-box-shadow: 0 0 0 50px white inset;
+}
+
+input,
+input:focus {
+  border: none;
+  height: 7vh;
+  font-size: 1.8rem;
+  font-family: 'Glory', sans-serif;
+}
+
+.text-field:focus {
+  outline: none;
+  background: white;
+}
+
+.text-field {
+  max-height: 3rem;
+  margin-top: 0.35rem;
+  margin-left: 1rem;
+  min-width: 35vw;
+  max-width: 100%;
+}
+
+.submit {
+  min-height: 100%;
+  padding: 5px;
+  color: #fff;
+  background: #004d7a;
+  float: right;
+  width: 100px;
+  height: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.submit:hover {
+  background: #051937;
+}
+
+.form-container {
+  width: 70%;
+  max-width: 300px;
+}
+
+/* --------  SONG LIST STYLING  -------- */
+
+.song-container {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+margin: 1rem;
+padding:2rem;
+border-radius: 10px;
+background-color: rgba(0, 77, 122, 0.7);
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+
+}
+
+.song-image {
+  border: aliceblue 2px solid;
+  min-height: 11rem;
+  min-width: 11rem;
+  margin-right: 2rem;
+}
+
+.song-section {
+  min-width: 34vw;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.song-section,
+.song-section a {
+  color: #051937;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.song-div {
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 1rem;
+  background-color: rgb(229, 231, 233);
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.song-div:hover {
+  position: relative;
+}
+
+.song-compare-container {
+  min-width: 500px;
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.song-compare-div {
+display: flex;
+flex-direction: column;
+align-items: center;
+min-width: 20vw;
+margin: 1rem;
+padding:2rem;
+border-radius: 10px;
+background-color: aliceblue;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.chart-row {
+  margin-top: -15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-bar {
+  margin: 5px;
+  width: 6vw;
+  height: 6px;
+  background: #051937;
+}
+
+.similar-songs-button {
+  min-height: 100%;
+  padding: 5px;
+  color: #fff;
+  background: #004d7a;
+  float: left;
+  width: 250px;
+  height: 4rem;
+  font-size: 1.8rem;
+  font-family: 'Glory', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  text-align: left;
+  padding-left: 15px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.similar-songs-list {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-top: 100px;
+  width: 80vw;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.similar-song a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.similar-song {
+  padding-top: 10px;
 }

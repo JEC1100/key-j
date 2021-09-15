@@ -1,4 +1,4 @@
-const formatMood = require('../../src/formatting/mood');
+const formatMood = require('../../helperFunctions/formatting/mood');
 
 describe('formatting mood', () => {
   it("returns ':'(' for values below 0.2", () => {
