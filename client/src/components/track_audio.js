@@ -50,12 +50,20 @@ export const TrackAudioFeatures = () => {
   },[])
 
   return(<div>
-    <p> ENERGY: {formatEnergy(state.energy)}<br></br>
-    DANCEABILITY: {formatDanceability(state.danceability)} <br></br>
-    TEMPO: {state.tempo} BPM <br></br>
-    KEY: {formatKey(state.key)} {state.mode === 1 ? 'Major' : 'Minor'}<br></br>
-    MOOD: {formatMood(state.valence)} 
-    </p>
+    <div className='song-container'>
+    <div className='song-image'>
+    <img src={"https://i.scdn.co/image/" + params.albumUrl} style={{ height: 240 }}/>
+    </div>
+      <div className='song-section'>
+      <h2>Song Statistics</h2>
+        <p> ENERGY: {formatEnergy(state.energy)} <br></br>
+        DANCEABILITY: {formatDanceability(state.danceability)} <br></br>
+        TEMPO: {state.tempo} BPM <br></br>
+        KEY: {formatKey(state.key)} {state.mode === 1 ? 'Major' : 'Minor'}<br></br>
+        MOOD{formatMood(state.valence)} 
+        </p>
+      </div>
+    </div>
     <Searchbar submit={submitSongName} redirect={false} />
     <button onClick={seeSimilarSongs}>See Similar Songs</button>
     { compareSongs ? ( <SongsLikeThis song={[state]}/> ): (null) }

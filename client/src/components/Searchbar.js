@@ -20,15 +20,16 @@ const Searchbar = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} data-testid="form">
-      <label htmlFor="songname">Song name</label>
+    <form className='search-bar' onSubmit={handleSubmit} data-testid="form">
       <input
+        className='text-field'
         type="text"
         value={songname}
         onChange={handleChange}
         id="songname"
+        placeholder="Type the song title here..."
       />
-      <input type="submit" value="Submit" />
+      <input className='submit' type="submit" value="Submit" />
     </form>
   );
 };

@@ -11,16 +11,16 @@ const getMultipleAudioFeatures = (songOneId, songTwoId) => {
   const response = new Promise((res, rej) => {
     spotifyApi
       .clientCredentialsGrant()
-      .then(function (data) {
+      .then(function(data) {
         spotifyApi.setAccessToken(data.body['access_token']);
         return spotifyApi.getAudioFeaturesForTracks([songOneId, songTwoId]);
       })
       .then(
-        function (data) {
+        function(data) {
           let result = data.body.audio_features;
           res(result);
         },
-        function (err) {
+        function(err) {
           rej('Something went wrong!', err);
         }
       );
