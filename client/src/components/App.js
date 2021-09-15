@@ -50,8 +50,10 @@ const App = () => {
                 path={"/tracks/:songTitle"}
                 exact
               />
-              <Route component={TrackAudioFeatures} path="/track/:id/:albumUrl" exact />
-              <Route component={CompareSongs} path="/compare/:songAid/:songBid" exact />
+              <Route component={TrackAudioFeatures} path="/track/:id/:albumUrl/:trackName" exact />
+              <Route 
+              component={CompareSongs} 
+              path="/compare/:songAid/:songAalbumUrl/:songAName/:songBid/:songBalbumUrl/:songBName" exact />
               <Route component={ArtistTopTracks} path="/artist/:artistId/:artistName" exact />
             </Switch>
           </BrowserRouter>
