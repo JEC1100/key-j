@@ -77,7 +77,7 @@ export const TrackAudioFeatures = () => {
       </button>
       {compareSongs ? <SongsLikeThis song={[state]} /> : null}
       {submitted ? (
-        <SongInfo songTitle={songTitle} redirect={false} songAId={params.id} />
+        <SongInfo songTitle={songTitle} redirect={false} songAId={params.id}/>
       ) : null}
     </div>
   </div>
