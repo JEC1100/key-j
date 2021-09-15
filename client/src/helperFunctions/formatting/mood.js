@@ -1,14 +1,14 @@
 const formatMood = (value) => {
   if (value < 0.2) {
-    return ":'(";
+    return "😢";
   } else if (value < 0.4) {
-    return ':(';
+    return '🙁';
   } else if (value < 0.6) {
-    return ':|';
+    return '😐';
   } else if (value < 0.8) {
-    return ':)';
+    return '🙂';
   } else {
-    return ':D';
+    return '😄';
   }
 };
 
