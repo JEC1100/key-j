@@ -28,6 +28,7 @@ export const TrackAudioFeatures = () => {
 
   const seeSimilarSongs = () => {
     setCompareSongs(true);
+    
   };
 
   const searchbarMessage = 'Enter another song to compare track info';

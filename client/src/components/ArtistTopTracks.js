@@ -43,10 +43,9 @@ export const ArtistTopTracks = () => {
                 Song: <h2>{e.name}</h2>
               </div>
               </a>
-              
-                <div className='song-div'>
-                  Album: <h2>{e.album}</h2>
-                </div>
+              <div className='song-div'>
+                Album: <h2>{e.album}</h2>
+              </div>
             </div>
           </div>
         ))}
