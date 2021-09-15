@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Glory&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap');
 
-
 body {
   margin: 0;
   font-family: 'Glory', sans-serif;
@@ -32,31 +31,30 @@ code {
 }
 
 .breaker {
-  min-height: 15vh;
+  min-height: 250px;
 }
 
 h1 {
-  background-color: #004D7A;
+  background-color: #004d7a;
   color: aliceblue;
   letter-spacing: 10px;
   font-family: 'Hind', sans-serif;
   outline: white;
   font-size: 3rem;
   position: fixed;
-  top:20px;
+  top: 20px;
   left: 70px;
   padding: 20px;
- border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-
-
 
 /* --------  SEARCH BAR STYLING  -------- */
 
 form {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .search-bar {
@@ -65,18 +63,17 @@ form {
   background: white;
   min-width: 45vw;
   margin: 0;
-
-
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
   -webkit-text-fill-color: none;
   -webkit-box-shadow: 0 0 0 50px white inset;
 }
 
-input, input:focus {
+input,
+input:focus {
   border: none;
   height: 7vh;
   font-size: 1.8rem;
@@ -86,7 +83,6 @@ input, input:focus {
 .text-field:focus {
   outline: none;
   background: white;
-  
 }
 
 .text-field {
@@ -101,11 +97,12 @@ input, input:focus {
   min-height: 100%;
   padding: 5px;
   color: #fff;
-  background: #004D7A;
+  background: #004d7a;
   float: right;
   width: 100px;
   height: 4rem;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .submit:hover {
@@ -123,7 +120,6 @@ input, input:focus {
 display: flex;
 justify-content: flex-start;
 align-items: center;
-min-width: 40vw;
 margin: 1rem;
 padding:2rem;
 border-radius: 10px;
@@ -135,7 +131,7 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 
 .song-image {
   border: aliceblue 2px solid;
-  min-height:11rem;
+  min-height: 11rem;
   min-width: 11rem;
   margin-right: 2rem;
 }
@@ -146,13 +142,12 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   border-radius: 10px;
 }
 
-.song-section, .song-section a {
-
+.song-section,
+.song-section a {
   color: #051937;
   text-decoration: none;
   font-size: 1.2rem;
 }
-
 
 .song-div {
   position: relative;
@@ -162,11 +157,65 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   margin-bottom: 1rem;
   background-color: rgb(229, 231, 233);
   padding: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-
 
 .song-div:hover {
   position: relative;
   top:2px;
+}
+
+.song-compare-container {
+  min-width: 500px;
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.song-compare-div {
+display: flex;
+flex-direction: column;
+align-items: center;
+min-width: 20vw;
+margin: 1rem;
+padding:2rem;
+border-radius: 10px;
+background-color: aliceblue;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.chart-row {
+  margin-top: -15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-bar {
+  margin: 5px;
+  width: 6vw;
+  height: 6px;
+  background: #051937;
+}
+  top: 2px;
+}
+
+.similar-songs-button {
+  min-height: 100%;
+  padding: 5px;
+  color: #fff;
+  background: #004d7a;
+  float: left;
+  width: 250px;
+  height: 4rem;
+  font-size: 1.8rem;
+  font-family: 'Glory', sans-serif;
+  margin-top: 10px;
+  border-radius: 6px;
+  text-align: left;
+  padding-left: 15px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
