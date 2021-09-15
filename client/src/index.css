@@ -137,6 +137,20 @@ input {
   justify-content: flex-start;
   align-items: center;
   margin: 1rem;
+  height: 15vw;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: rgba(0, 77, 122, 0.7);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.home-song-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem;
+  height: 12vw;
   padding: 2rem;
   border-radius: 10px;
   background-color: rgba(0, 77, 122, 0.7);
@@ -145,9 +159,10 @@ input {
 }
 
 .song-image {
-  min-height: 11vh;
-  min-width: 11vw;
+  min-height: 7vh;
+  min-width: 7vw;
   margin-right: 2rem;
+  margin-top: 1rem;
 }
 
 .song-section {
@@ -176,6 +191,21 @@ input {
 }
 
 .song-div:hover {
+  position: relative;
+}
+
+.song-artist {
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 1rem;
+  color: honeydew;
+}
+
+a:link { text-decoration: none; }
+
+.song-artist:hover {
   position: relative;
 }
 

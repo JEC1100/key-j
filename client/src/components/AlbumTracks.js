@@ -40,7 +40,7 @@ export const AlbumTracks = () => {
           <div className='song-section'>
             <a href= {'/track/' + e.id + '/' + params.albumUrl + '/' + e.name} key={uuidv4()}>
             <div className='song-div'>
-              Song: <h2>{e.track_number}.  {e.name}</h2>
+              <h2>{e.track_number}.  {e.name}</h2>
             </div>
             </a>
           </div>
