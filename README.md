@@ -4,13 +4,6 @@ Key-J is an app to help DJs, musicians and music enthusiasts access a song's key
 
 It was concepted and built by [Isobel Peppiatt](https://github.com/isobelpepp), [Matt Firmston](https://github.com/YoFirmy), [Luke Usher](https://github.com/lushcodes), [James Condon](https://github.com/JEC1100) and [Pav Rao](https://github.com/pav0107) as their final project at Makers.
 
-## Run servers
-
-First cd into server folder and then run:
-
-```
-npm start
-```
 
 ## Set-up
 
@@ -41,6 +34,14 @@ npm install
 CLIENT_ID = <em>YOUR CLIENT ID</em>
 CLIENT_SECRET = <em>YOUR CLIENT SECRET</em>
 PORT = 3001
+```
+
+## Run servers
+
+First cd into server folder and then run:
+
+```
+npm start
 ```
 
 ### Server tests
