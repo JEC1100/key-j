@@ -20,7 +20,7 @@ const Searchbar = (props) => {
   };
 
   return (
-    <form className="search-bar" onSubmit={handleSubmit} data-testid="form" >
+    <form className="search-bar" onSubmit={handleSubmit} data-testid="form">
       <input
         className="text-field"
         type="text"
@@ -30,6 +30,7 @@ const Searchbar = (props) => {
         id="songname"
         placeholder={props.placeholder}
         autoFocus
+        required
       />
       <input className="submit" type="submit" value="Submit" />
     </form>

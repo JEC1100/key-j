@@ -10,18 +10,21 @@ let spotifyApi = new SpotifyWebApi({
 
 const getTracks = (songName) => {
   const response = new Promise((res, rej) => {
-    spotifyApi.clientCredentialsGrant().then(
-      function(data) {
+    spotifyApi
+      .clientCredentialsGrant()
+      .then(function(data) {
         spotifyApi.setAccessToken(data.body['access_token']);
         return spotifyApi.searchTracks(songName);
       })
-      .then(function(data) {
-        const tracks = data.body.tracks.items;
-        res(formatSongs(tracks));
-      },
-      function(err) {
-        rej('Something went wrong and its all Pavs fault!', err);
-      });
+      .then(
+        function(data) {
+          const tracks = data.body.tracks.items;
+          res(formatSongs(tracks));
+        },
+        function(err) {
+          rej('Something went wrong!', err);
+        }
+      );
   });
   return response;
 };
