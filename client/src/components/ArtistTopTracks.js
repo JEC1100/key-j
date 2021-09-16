@@ -54,7 +54,6 @@ export const ArtistTopTracks = () => {
               >
                 <div className="song-div">
                   Song: <h2>{e.name}</h2>
-                  <h4>Click to see song info</h4>
                 </div>
               </a>
               <a

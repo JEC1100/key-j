@@ -2,13 +2,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import React, { useState } from 'react';
 import SongInfo from './SongInfo';
 import Searchbar from './Searchbar';
-<<<<<<< HEAD
 import { TrackAudioFeatures } from './TrackAudio';
 import { CompareSongs} from './CompareSongs';
-=======
-import { TrackAudioFeatures } from './track_audio';
-import { CompareSongs } from './CompareSongs';
->>>>>>> bar-footer-screen
 import { ArtistTopTracks } from './ArtistTopTracks';
 import { AlbumTracks } from './AlbumTracks';
 
