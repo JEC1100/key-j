@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-const formatEnergy = require('../helperFunctions/formatting/energy');
-const formatDanceability = require('../helperFunctions/formatting/danceability');
-const formatKey = require('../helperFunctions/formatting/key');
-const formatMood = require('../helperFunctions/formatting/mood');
-const calculateSimilarity = require('../helperFunctions/calculate_similarity');
-const calculateKeySimilarity = require('../helperFunctions/calculate_key_similarity');
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+const formatEnergy = require("../helperFunctions/formatting/energy");
+const formatDanceability = require("../helperFunctions/formatting/danceability");
+const formatKey = require("../helperFunctions/formatting/key");
+const formatMood = require("../helperFunctions/formatting/mood");
+const calculateSimilarity = require("../helperFunctions/calculate_similarity");
+const calculateKeySimilarity = require("../helperFunctions/calculate_key_similarity");
 
 export const CompareSongs = () => {
   let params = useParams();
@@ -13,11 +13,11 @@ export const CompareSongs = () => {
   const [songTwoInfo, setSongTwoInfo] = useState({});
 
   useEffect(() => {
-    fetch('/api/compare', {
-      method: 'POST',
+    fetch("/api/compare", {
+      method: "POST",
       headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
+        Accept: "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         songId: params,
@@ -34,7 +34,7 @@ export const CompareSongs = () => {
         console.log(response.songs[0], response.songs[1]);
         setSongOneInfo(response.songs[0]);
         setSongTwoInfo(response.songs[1]);
-        console.log('here', songOneInfo, songTwoInfo);
+        console.log("here", songOneInfo, songTwoInfo);
       });
   }, []);
 
@@ -59,11 +59,11 @@ export const CompareSongs = () => {
   };
 
   return (
-    <div className="song-compare-container">
-      <div className="song-container">
-        <div className="song-image">
+    <div className="container song-compare-container">
+      <div className="col song-container">
+        <div className="col song-image">
           <img
-            src={'https://i.scdn.co/image/' + params.songAalbumUrl}
+            src={"https://i.scdn.co/image/" + params.songAalbumUrl}
             style={{ height: 200 }}
           />
         </div>
@@ -185,7 +185,7 @@ export const CompareSongs = () => {
       <div className="song-container">
         <div className="song-image">
           <img
-            src={'https://i.scdn.co/image/' + params.songBalbumUrl}
+            src={"https://i.scdn.co/image/" + params.songBalbumUrl}
             style={{ height: 180 }}
           />
         </div>
