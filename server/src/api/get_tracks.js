@@ -12,16 +12,16 @@ const getTracks = (songName) => {
   const response = new Promise((res, rej) => {
     spotifyApi
       .clientCredentialsGrant()
-      .then(function (data) {
+      .then(function(data) {
         spotifyApi.setAccessToken(data.body['access_token']);
         return spotifyApi.searchTracks(songName);
       })
       .then(
-        function (data) {
+        function(data) {
           const tracks = data.body.tracks.items;
           res(formatSongs(tracks));
         },
-        function (err) {
+        function(err) {
           rej('Something went wrong!', err);
         }
       );
