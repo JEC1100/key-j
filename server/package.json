@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+ 
+  "engines": {
+    "node": "16.7.0"
+  },
+
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",
     "test": "jest",
@@ -20,10 +25,6 @@
     "express": "^4.17.1",
     "nodemon": "^2.0.12",
     "spotify-web-api-node": "^5.0.2"
-  },
-  "engines": {
-    "node": "=16.7.0",
-    "npm": "=7.20.3"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
