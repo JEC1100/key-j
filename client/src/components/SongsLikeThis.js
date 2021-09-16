@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
 export const SongsLikeThis = (props) => {
   const [state, setState] = useState([]);
-  const params = useParams()
+  const params = useParams();
 
   let song = props.song;
   let songid = song[0].id;
@@ -36,7 +36,7 @@ export const SongsLikeThis = (props) => {
     <div>
       {state.length > 0 &&
         state.map((e, i) => (
-          <div className="home-song-container" key={i}>
+          <div className="home-song-container song-container" key={i}>
           <div className='song-image'>
           <a href={['/album', e.album.name, e.album.id, e.album.images[0].url.split('/')[4]].join('/')} key={uuidv4()}>
               <img src={e.album.images[0].url} style={{ height: 180 }}/>
